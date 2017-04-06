@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0428EBA21BCE4748006CE558 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0428EBA11BCE4748006CE558 /* Default-568h@2x.png */; };
+		048DF5971A6F925F0080BA99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DF5961A6F925F0080BA99 /* Foundation.framework */; };
+		048DF5991A6F925F0080BA99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DF5981A6F925F0080BA99 /* CoreGraphics.framework */; };
+		048DF59B1A6F925F0080BA99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DF59A1A6F925F0080BA99 /* UIKit.framework */; };
+		048DF5A11A6F925F0080BA99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048DF59F1A6F925F0080BA99 /* InfoPlist.strings */; };
+		048DF5A31A6F925F0080BA99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DF5A21A6F925F0080BA99 /* main.m */; };
+		048DF5A71A6F925F0080BA99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DF5A61A6F925F0080BA99 /* AppDelegate.m */; };
+		048DF5A91A6F925F0080BA99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048DF5A81A6F925F0080BA99 /* Images.xcassets */; };
+		048DF5B01A6F925F0080BA99 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DF5AF1A6F925F0080BA99 /* XCTest.framework */; };
+		048DF5B11A6F925F0080BA99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DF5961A6F925F0080BA99 /* Foundation.framework */; };
+		048DF5B21A6F925F0080BA99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DF59A1A6F925F0080BA99 /* UIKit.framework */; };
+		048DF5BA1A6F925F0080BA99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048DF5B81A6F925F0080BA99 /* InfoPlist.strings */; };
+		048DF5BC1A6F925F0080BA99 /* eghlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DF5BB1A6F925F0080BA99 /* eghlTests.m */; };
+		048DF5C81A6F927B0080BA99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DF5C61A6F927B0080BA99 /* ViewController.m */; };
+		048DF5C91A6F927B0080BA99 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DF5C71A6F927B0080BA99 /* ViewController.xib */; };
+		04D817951A778C79006A4861 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D817931A778C79006A4861 /* ShowViewController.m */; };
+		04D817961A778C79006A4861 /* ShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D817941A778C79006A4861 /* ShowViewController.xib */; };
+		CB364FE71E52F7A0004007AC /* guidehandicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB364FE51E52F7A0004007AC /* guidehandicon.png */; };
+		CB848AE41E6CAB60004A4D48 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB848AE31E6CAB60004A4D48 /* MBProgressHUD.m */; };
+		CB848AE61E6CB300004A4D48 /* libEGHLPayment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB848AE51E6CB300004A4D48 /* libEGHLPayment.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		048DF5B31A6F925F0080BA99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 048DF58B1A6F925F0080BA99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 048DF5921A6F925F0080BA99;
+			remoteInfo = eghl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0428EBA11BCE4748006CE558 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		048DF5931A6F925F0080BA99 /* eGHL Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eGHL Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		048DF5961A6F925F0080BA99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		048DF5981A6F925F0080BA99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		048DF59A1A6F925F0080BA99 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		048DF59E1A6F925F0080BA99 /* eGHL Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "eGHL Example-Info.plist"; sourceTree = "<group>"; };
+		048DF5A01A6F925F0080BA99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		048DF5A21A6F925F0080BA99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		048DF5A41A6F925F0080BA99 /* eGHL Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eGHL Example-Prefix.pch"; sourceTree = "<group>"; };
+		048DF5A51A6F925F0080BA99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		048DF5A61A6F925F0080BA99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		048DF5A81A6F925F0080BA99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		048DF5AE1A6F925F0080BA99 /* eGHL ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eGHL ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		048DF5AF1A6F925F0080BA99 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		048DF5B71A6F925F0080BA99 /* eGHL ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "eGHL ExampleTests-Info.plist"; sourceTree = "<group>"; };
+		048DF5B91A6F925F0080BA99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		048DF5BB1A6F925F0080BA99 /* eghlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eghlTests.m; sourceTree = "<group>"; };
+		048DF5C51A6F927B0080BA99 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		048DF5C61A6F927B0080BA99 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		048DF5C71A6F927B0080BA99 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		04D817921A778C79006A4861 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		04D817931A778C79006A4861 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		04D817941A778C79006A4861 /* ShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowViewController.xib; sourceTree = "<group>"; };
+		CB364FE41E52F7A0004007AC /* EGHLPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGHLPayment.h; sourceTree = "<group>"; };
+		CB364FE51E52F7A0004007AC /* guidehandicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidehandicon.png; sourceTree = "<group>"; };
+		CB848AE21E6CAB60004A4D48 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		CB848AE31E6CAB60004A4D48 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		CB848AE51E6CB300004A4D48 /* libEGHLPayment.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEGHLPayment.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		048DF5901A6F925F0080BA99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB848AE61E6CB300004A4D48 /* libEGHLPayment.a in Frameworks */,
+				048DF5991A6F925F0080BA99 /* CoreGraphics.framework in Frameworks */,
+				048DF59B1A6F925F0080BA99 /* UIKit.framework in Frameworks */,
+				048DF5971A6F925F0080BA99 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		048DF5AB1A6F925F0080BA99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048DF5B01A6F925F0080BA99 /* XCTest.framework in Frameworks */,
+				048DF5B21A6F925F0080BA99 /* UIKit.framework in Frameworks */,
+				048DF5B11A6F925F0080BA99 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		048DF58A1A6F925F0080BA99 = {
+			isa = PBXGroup;
+			children = (
+				048DF59C1A6F925F0080BA99 /* eghl */,
+				0428EBA11BCE4748006CE558 /* Default-568h@2x.png */,
+				048DF5B51A6F925F0080BA99 /* eghlTests */,
+				048DF5951A6F925F0080BA99 /* Frameworks */,
+				048DF5941A6F925F0080BA99 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		048DF5941A6F925F0080BA99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				048DF5931A6F925F0080BA99 /* eGHL Example.app */,
+				048DF5AE1A6F925F0080BA99 /* eGHL ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		048DF5951A6F925F0080BA99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				048DF5961A6F925F0080BA99 /* Foundation.framework */,
+				048DF5981A6F925F0080BA99 /* CoreGraphics.framework */,
+				048DF59A1A6F925F0080BA99 /* UIKit.framework */,
+				048DF5AF1A6F925F0080BA99 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		048DF59C1A6F925F0080BA99 /* eghl */ = {
+			isa = PBXGroup;
+			children = (
+				CB848AE11E6CAB4E004A4D48 /* Ext Library */,
+				CB364FE31E52F7A0004007AC /* GHL Library */,
+				048DF5A51A6F925F0080BA99 /* AppDelegate.h */,
+				048DF5A61A6F925F0080BA99 /* AppDelegate.m */,
+				048DF5C51A6F927B0080BA99 /* ViewController.h */,
+				048DF5C61A6F927B0080BA99 /* ViewController.m */,
+				048DF5C71A6F927B0080BA99 /* ViewController.xib */,
+				04D817921A778C79006A4861 /* ShowViewController.h */,
+				04D817931A778C79006A4861 /* ShowViewController.m */,
+				04D817941A778C79006A4861 /* ShowViewController.xib */,
+				048DF5A81A6F925F0080BA99 /* Images.xcassets */,
+				048DF59D1A6F925F0080BA99 /* Supporting Files */,
+			);
+			path = eghl;
+			sourceTree = "<group>";
+		};
+		048DF59D1A6F925F0080BA99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				048DF59E1A6F925F0080BA99 /* eGHL Example-Info.plist */,
+				048DF59F1A6F925F0080BA99 /* InfoPlist.strings */,
+				048DF5A21A6F925F0080BA99 /* main.m */,
+				048DF5A41A6F925F0080BA99 /* eGHL Example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		048DF5B51A6F925F0080BA99 /* eghlTests */ = {
+			isa = PBXGroup;
+			children = (
+				048DF5BB1A6F925F0080BA99 /* eghlTests.m */,
+				048DF5B61A6F925F0080BA99 /* Supporting Files */,
+			);
+			path = eghlTests;
+			sourceTree = "<group>";
+		};
+		048DF5B61A6F925F0080BA99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				048DF5B71A6F925F0080BA99 /* eGHL ExampleTests-Info.plist */,
+				048DF5B81A6F925F0080BA99 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB364FE31E52F7A0004007AC /* GHL Library */ = {
+			isa = PBXGroup;
+			children = (
+				CB848AE51E6CB300004A4D48 /* libEGHLPayment.a */,
+				CB364FE41E52F7A0004007AC /* EGHLPayment.h */,
+				CB364FE51E52F7A0004007AC /* guidehandicon.png */,
+			);
+			name = "GHL Library";
+			path = ../../Library;
+			sourceTree = "<group>";
+		};
+		CB848AE11E6CAB4E004A4D48 /* Ext Library */ = {
+			isa = PBXGroup;
+			children = (
+				CB848AE21E6CAB60004A4D48 /* MBProgressHUD.h */,
+				CB848AE31E6CAB60004A4D48 /* MBProgressHUD.m */,
+			);
+			name = "Ext Library";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		048DF5921A6F925F0080BA99 /* eGHL Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048DF5BF1A6F925F0080BA99 /* Build configuration list for PBXNativeTarget "eGHL Example" */;
+			buildPhases = (
+				048DF58F1A6F925F0080BA99 /* Sources */,
+				048DF5901A6F925F0080BA99 /* Frameworks */,
+				048DF5911A6F925F0080BA99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eGHL Example";
+			productName = eghl;
+			productReference = 048DF5931A6F925F0080BA99 /* eGHL Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		048DF5AD1A6F925F0080BA99 /* eGHL ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048DF5C21A6F925F0080BA99 /* Build configuration list for PBXNativeTarget "eGHL ExampleTests" */;
+			buildPhases = (
+				048DF5AA1A6F925F0080BA99 /* Sources */,
+				048DF5AB1A6F925F0080BA99 /* Frameworks */,
+				048DF5AC1A6F925F0080BA99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				048DF5B41A6F925F0080BA99 /* PBXTargetDependency */,
+			);
+			name = "eGHL ExampleTests";
+			productName = eghlTests;
+			productReference = 048DF5AE1A6F925F0080BA99 /* eGHL ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		048DF58B1A6F925F0080BA99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = eghl;
+				TargetAttributes = {
+					048DF5AD1A6F925F0080BA99 = {
+						TestTargetID = 048DF5921A6F925F0080BA99;
+					};
+				};
+			};
+			buildConfigurationList = 048DF58E1A6F925F0080BA99 /* Build configuration list for PBXProject "eGHL Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 048DF58A1A6F925F0080BA99;
+			productRefGroup = 048DF5941A6F925F0080BA99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				048DF5921A6F925F0080BA99 /* eGHL Example */,
+				048DF5AD1A6F925F0080BA99 /* eGHL ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		048DF5911A6F925F0080BA99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048DF5A11A6F925F0080BA99 /* InfoPlist.strings in Resources */,
+				048DF5C91A6F927B0080BA99 /* ViewController.xib in Resources */,
+				048DF5A91A6F925F0080BA99 /* Images.xcassets in Resources */,
+				0428EBA21BCE4748006CE558 /* Default-568h@2x.png in Resources */,
+				CB364FE71E52F7A0004007AC /* guidehandicon.png in Resources */,
+				04D817961A778C79006A4861 /* ShowViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		048DF5AC1A6F925F0080BA99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048DF5BA1A6F925F0080BA99 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		048DF58F1A6F925F0080BA99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048DF5C81A6F927B0080BA99 /* ViewController.m in Sources */,
+				048DF5A71A6F925F0080BA99 /* AppDelegate.m in Sources */,
+				CB848AE41E6CAB60004A4D48 /* MBProgressHUD.m in Sources */,
+				048DF5A31A6F925F0080BA99 /* main.m in Sources */,
+				04D817951A778C79006A4861 /* ShowViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		048DF5AA1A6F925F0080BA99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048DF5BC1A6F925F0080BA99 /* eghlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		048DF5B41A6F925F0080BA99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 048DF5921A6F925F0080BA99 /* eGHL Example */;
+			targetProxy = 048DF5B31A6F925F0080BA99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		048DF59F1A6F925F0080BA99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048DF5A01A6F925F0080BA99 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		048DF5B81A6F925F0080BA99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048DF5B91A6F925F0080BA99 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		048DF5BD1A6F925F0080BA99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		048DF5BE1A6F925F0080BA99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		048DF5C01A6F925F0080BA99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eghl/eGHL Example-Prefix.pch";
+				INFOPLIST_FILE = "eghl/eGHL Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../Library,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ghl.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		048DF5C11A6F925F0080BA99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eghl/eGHL Example-Prefix.pch";
+				INFOPLIST_FILE = "eghl/eGHL Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../Library,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ghl.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		048DF5C31A6F925F0080BA99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/eghl.app/eghl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eghl/eghl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "eghlTests/eGHL ExampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ghl.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		048DF5C41A6F925F0080BA99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/eghl.app/eghl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eghl/eghl-Prefix.pch";
+				INFOPLIST_FILE = "eghlTests/eGHL ExampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ghl.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		048DF58E1A6F925F0080BA99 /* Build configuration list for PBXProject "eGHL Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048DF5BD1A6F925F0080BA99 /* Debug */,
+				048DF5BE1A6F925F0080BA99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		048DF5BF1A6F925F0080BA99 /* Build configuration list for PBXNativeTarget "eGHL Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048DF5C01A6F925F0080BA99 /* Debug */,
+				048DF5C11A6F925F0080BA99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		048DF5C21A6F925F0080BA99 /* Build configuration list for PBXNativeTarget "eGHL ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048DF5C31A6F925F0080BA99 /* Debug */,
+				048DF5C41A6F925F0080BA99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 048DF58B1A6F925F0080BA99 /* Project object */;
+}

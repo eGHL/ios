@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "79d9dd40-1667-a843-96f1-a62cd4208f40++9100" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "79d9dd40-1667-a843-96f1-a62cd4208f40++9100" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47A82EDC-5B2A-4701-8B5A-E1E2DA14A7E6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "79d9dd40-1667-a843-96f1-a62cd4208f40++9100" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "eghl",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eghl.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/10.78.28.10\/svn\/DEV15-44-eGHL",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79d9dd40-1667-a843-96f1-a62cd4208f40++9100"
+    }
+  ]
+}
