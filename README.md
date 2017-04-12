@@ -45,10 +45,10 @@ Production environment:
 
 In normal flow (user authorise payment in bank side and wait until sdk redirect back to your app) merchant app will only get transaction 1 or 0. 
 However, there a situation where sdk return 2, which is pending. Refer scenario 3.
-****
-User exit sdk = user press exit/back button (including hardware back button)
 
-### **Scenario 1** - User exit SDK **before** eGHL landing page finish load ###
+**User exit sdk** = user press exit/back button (including hardware back button)
+
+**Scenario 1** - User exit SDK **before** eGHL landing page finish load
 * **IOS**
 
 	SDK will return **only** *TxnMessage = @"Buyer cancelled”* & *TxnStatus = @"1”*
@@ -61,7 +61,6 @@ User exit sdk = user press exit/back button (including hardware back button)
 Status Code		Constant Name					Description
 -999			EGHL.TRANSACTION_CANCELLED		Transaction cancelled by the user
 ````
-****
 
 **Scenario 2 - Landing page finish load and user exit sdk**
 
@@ -93,7 +92,6 @@ Result (Converted to json format)
     "HashValue2": "a5af31a0eee1d1d7180337adba5b58ffe5a96905eac2bfc748fc76433667819f"
 }
 ````
-****
 
 **Scenario 3 - Redirecting/loading to bank page, etc.. and user exit sdk**
 
