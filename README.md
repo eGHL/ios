@@ -5,13 +5,13 @@
 # **Getting Started** #
 In this page, you'll find all the information you need to get started and start receiving payments on your mobile apps.
 
-## **How It all works** ##
+# **How It all works** #
 In this section, you will have general overview of SDK so that you have a better understanding on how all the pieces fall into place.
 
 It all starts with user intend to **make payment**/**checkout** in the merchants app by either pressing the link/button, merchant app will gather required info (exclude sensitive card data) and pass it to the SDK via provided parameter object & methods.
 At this point, all processing will handle by SDK. SDK will redirect user to eGHL's payment page (some call it **landing page**) and bank side choosed by merchant/user. 
 
-## **Bypass eGHL's payment page** ##
+# **Skipping eGHL's payment page** #
 It's your chooice! eGHL's gateway behave accordingly by info you pass. **Except for cards payments**, merchant have the option to bypass our Landing Page by giving correct **PymtMethod** & **IssuingBank**.
 
 eg.
@@ -27,14 +27,14 @@ FPX Test environment:
      
 Production environment:
 
-* FPXD_MB2U0227	→ *Maybank2u *
-* FPXD_BCBB0235	→ *CIMB Clicks*
-* FPXD_RHB0218	→ *RHB Now*
-* FPXD_HLB0224	→ *Hong Leong Connect*
-* FPXD_AMBB0209	→ *AmOnline*
-* FPXD_ABMB0212	→ *AllianceOnline*
+* FPXD_MB2U0227 → *Maybank2u *
+* FPXD_BCBB0235 → *CIMB Clicks*
+* FPXD_RHB0218  → *RHB Now*
+* FPXD_HLB0224  → *Hong Leong Connect*
+* FPXD_AMBB0209 → *AmOnline*
+* FPXD_ABMB0212 → *AllianceOnline*
 
-## **Normal payment flow** ##
+# **Normal payment flow** #
 1. Checkout **[User]**
 2. Compile info & pass to SDK **[Merchant]**
 3. Redirect to banks site **[SDK]**
@@ -48,21 +48,21 @@ However, there a situation where sdk return 2, which is pending. Refer scenario 
 
 **User exit sdk** = user press exit/back button (including hardware back button)
 
-**Scenario 1** - User exit SDK **before** eGHL landing page finish load
+##Scenario 1  - User exit SDK **before** eGHL landing page finish load##
 * **IOS**
 
-	SDK will return **only** *TxnMessage = @"Buyer cancelled”* & *TxnStatus = @"1”*
+    SDK will return **only** *TxnMessage = @"Buyer cancelled”* & *TxnStatus = @"1”*
 
 * **Android**
-	
-	SDK will return as the following
+    
+    SDK will return as the following
 
 ````
-Status Code		Constant Name					Description
--999			EGHL.TRANSACTION_CANCELLED		Transaction cancelled by the user
+Status Code     Constant Name                   Description
+-999            EGHL.TRANSACTION_CANCELLED      Transaction cancelled by the user
 ````
 
-**Scenario 2 - Landing page finish load and user exit sdk**
+##Scenario 2 - Landing page finish load and user exit sdk##
 
 SDK will return same result as when user tap on cancel link at the bottom of eGHL Landing page
 eg.
@@ -93,16 +93,41 @@ Result (Converted to json format)
 }
 ````
 
-**Scenario 3 - Redirecting/loading to bank page, etc.. and user exit sdk**
+##Scenario 3 - Redirecting/loading to bank page, etc.. and user exit sdk##
 
 SDK will requery  to ensure not to miss any capture status by bank.
 
 eg.
 
+````
+#!json
+{
+  "TxnExists": "0",
+  "QueryDesc": "Record exists",
+  "TransactionType": "QUERY",
+  "PymtMethod": "ANY",
+  "ServiceID": "SIT",
+  "PaymentID": "AJ1490948167917",
+  "OrderNumber": "1490948167917",
+  "Amount": "1.00",
+  "TotalRefundAmount": "0",
+  "CurrencyCode": "MYR",
+  "TxnID": "",
+  "IssuingBank": "",
+  "TxnStatus": "1",
+  "AuthCode": "",
+  "BankRefNo": "",
+  "TxnMessage": "",
+  "HashValue": "e5bf7e82414e37c27aa616f271564d6bee5598fbc8a5fe302f8d772d47b4dfb1",
+  "SessionID": "",
+  "HashValue2": "a5af31a0eee1d1d7180337adba5b58ffe5a96905eac2bfc748fc76433667819f",
+  "getParameters": "TxnExists=0&QueryDesc=Record exists&TransactionType=QUERY&PymtMethod=ANY&ServiceID=SIT&PaymentID=AJ1490948167917&OrderNumber=1490948167917&Amount=1.00&TotalRefundAmount=0&CurrencyCode=MYR&TxnID=&IssuingBank=&TxnStatus=1&AuthCode=&BankRefNo=&TxnMessage=&HashValue=e5bf7e82414e37c27aa616f271564d6bee5598fbc8a5fe302f8d772d47b4dfb1&SessionID=&HashValue2=a5af31a0eee1d1d7180337adba5b58ffe5a96905eac2bfc748fc76433667819f"
+}
+````
+
 ****
 
-## Any test card? ##
-Glad you ask, refer the following
+## Test card ##
 ````
 Approved Test Cards
 VISA: 4444333322221111

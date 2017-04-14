@@ -15,6 +15,7 @@
 }
 
 -(id)initWithValue:(PaymentRequestPARAM *)payment;
-
++ (NSString *)displayResponseParam:(PaymentRespPARAM *)respParam;
++ (NSString *)displayRequestParam:(PaymentRequestPARAM *)reqParam;
 @property (strong, nonatomic) PaymentRequestPARAM *paypram;
 @end

@@ -71,18 +71,32 @@ typedef enum {
     // ------------------
     
     [self.view addSubview:self.eghlpay];
-    
-    [self.eghlpay EGHLRequestSale:paypram successBlock:^(NSString* SuccessData) {
-        NSLog(@"respdata:%@",SuccessData);
+        
+    [self.eghlpay paymentAPI:paypram successBlock:^(PaymentRespPARAM * result) {
+        NSString * resultString;
+        
+        if ([result.mpLightboxError isKindOfClass:[NSDictionary class]]) {
+            resultString = [NSString stringWithFormat:@"%@",result.mpLightboxError];
+        } else {
+            resultString = [ShowViewController displayResponseParam:result];
+        }
+        
+        UIAlertView * av = [[UIAlertView alloc] initWithTitle:@"Payment Status" message:resultString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        av.tag = tagAVResult;
+        [av show];
+
+        
     } failedBlock:^(NSString *errorCode, NSString *errorData) {
         NSLog(@"errordata:%@",errorData);
+        UIAlertView * av = [[UIAlertView alloc] initWithTitle:@"Payment Status" message:errorData delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        av.tag = tagAVResult;
+        [av show];
     }];
 }
 
 - (EGHLPayment *)eghlpay {
     if (!_eghlpay) {
         _eghlpay = [[EGHLPayment alloc] init];
-        _eghlpay.delegate = self;
     }
     return _eghlpay;
 }
@@ -108,7 +122,13 @@ typedef enum {
      2 – There was some kind of internal error occurred during query processing. Merchant System can retry sending query request
      TxnStatus will be -2
      **************************************/
-    NSString * resultString = [NSString stringWithFormat:@"TxnExists:%@\nQueryDesc:%@\nTransactionType:%@\nPymtMethod:%@\nServiceID:%@\nPaymentID:%@\nOrderNumber:%@\nAmount:%@\nCurrencyCode:%@\nTxnID:%@\nIssuingBank:%@\nAuthCode:%@\nTxnStatus:%@\nBankRefNo:%@\nTxnMessage:%@\nHashValue:%@\nSessionID:%@", result.TxnExists,result.QueryDesc,result.TransactionType,result.PymtMethod,result.ServiceID,result.PaymentID,result.OrderNumber,result.Amount,result.CurrencyCode,result.TxnID,result.IssuingBank,result.AuthCode, result.TxnStatus,result.BankRefNo,result.TxnMessage,result.HashValue,result.SessionID];
+    NSString * resultString;
+    
+    if ([result.mpLightboxError isKindOfClass:[NSDictionary class]]) {
+        resultString = [NSString stringWithFormat:@"%@",result.mpLightboxError];
+    } else {
+        resultString = [NSString stringWithFormat:@"TxnExists:%@\nQueryDesc:%@\nTransactionType:%@\nPymtMethod:%@\nServiceID:%@\nPaymentID:%@\nOrderNumber:%@\nAmount:%@\nCurrencyCode:%@\nTxnID:%@\nIssuingBank:%@\nAuthCode:%@\nTxnStatus:%@\nBankRefNo:%@\nTxnMessage:%@\nHashValue:%@\nSessionID:%@", result.TxnExists,result.QueryDesc,result.TransactionType,result.PymtMethod,result.ServiceID,result.PaymentID,result.OrderNumber,result.Amount,result.CurrencyCode,result.TxnID,result.IssuingBank,result.AuthCode, result.TxnStatus,result.BankRefNo,result.TxnMessage,result.HashValue,result.SessionID];
+    }
     UIAlertView * av = [[UIAlertView alloc] initWithTitle:@"Payment Status" message:resultString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     av.tag = tagAVResult;
     [av show];
@@ -155,6 +175,39 @@ typedef enum {
         default:
             break;
     }
+}
+
+#pragma mark - convenient method
++ (NSString *)displayResponseParam:(PaymentRespPARAM *)respParam {
+    NSMutableString * message = [NSMutableString string];
+    
+    for (NSString * key in @[@"Amount",@"AuthCode",@"BankRefNo",@"CardExp",@"CardHolder",@"CardNoMask",@"CardType",@"CurrencyCode",@"EPPMonth",@"EPP_YN",@"HashValue",@"HashValue2",@"IssuingBank",@"OrderNumber",@"PromoCode",@"PromoOriAmt",@"Param6",@"Param7",@"PaymentID",@"PymtMethod",@"QueryDesc",@"ServiceID",@"SessionID",@"SettleTAID",@"TID",@"TotalRefundAmount",@"Token",@"TokenType",@"TransactionType",@"TxnExists",@"TxnID",@"TxnMessage",@"TxnStatus",@"ReqToken",@"PairingToken",@"PreCheckoutId",@"Cards",@"mpLightboxError"]) {
+        NSString * value = [respParam valueForKey:key];
+        if (value.length>0) {
+            [message appendFormat:@"%@: %@\n", key,value];
+        }
+    }
+        
+    return message;
+}
++ (NSString *)displayRequestParam:(PaymentRequestPARAM *)reqParam {
+    NSMutableString * message = [NSMutableString string];
+    
+    for (NSString * key in @[@"realHost",@"Amount", @"PaymentID", @"OrderNumber", @"MerchantName", @"ServiceID", @"PymtMethod", @"MerchantReturnURL", @"CustEmail", @"Password", @"CustPhone", @"CurrencyCode", @"CustName", @"LanguageCode", @"PaymentDesc", @"PageTimeout", @"CustIP", @"MerchantApprovalURL", @"CustMAC", @"MerchantUnApprovalURL", @"CardHolder", @"CardNo", @"CardExp", @"CardCVV2", @"BillAddr", @"BillPostal", @"BillCity", @"BillRegion", @"BillCountry", @"ShipAddr", @"ShipPostal", @"ShipCity", @"ShipRegion", @"ShipCountry", @"TransactionType", @"TokenType", @"Token", @"SessionID", @"IssuingBank", @"MerchantCallBackURL", @"B4TaxAmt", @"TaxAmt", @"Param6", @"Param7", @"EPPMonth", @"PromoCode", @"ReqVerifier", @"PairingVerifier", @"CheckoutResourceURL", @"ReqToken", @"PairingToken", @"CardId", @"PreCheckoutId", @"mpLightboxParameter",  @"sdkTimeOut"]) {
+        id value = [reqParam valueForKey:key];
+        
+        if (value) {
+            if ([value isKindOfClass:[NSString class]] || [value isKindOfClass:[NSArray class]]) {
+                if ([value length]>0) {
+                    [message appendFormat:@"%@: %@\n", key, value];
+                }
+            } else if ([value isKindOfClass:[NSNumber class]]) {
+                [message appendFormat:@"%@: %d\n", key, [value intValue]] ;
+            }
+        }
+    }
+    
+    return message;
 }
 
 @end

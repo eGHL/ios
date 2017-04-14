@@ -30,10 +30,6 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UISegmentedControl *Bank;
 @property (strong, nonatomic) IBOutlet UISwitch *HostSwitch;
 
-@property (weak, nonatomic) IBOutlet UIButton *SaleReq;
-@property (weak, nonatomic) IBOutlet UIButton *QueryReq;
-@property (weak, nonatomic) IBOutlet UIButton *Reversal;
-
 @property (nonatomic, strong) NSString * paymentID;
 
 @property (nonatomic,strong) NSArray * listOfCard;
@@ -69,12 +65,12 @@ typedef enum {
 
 - (void)generateNewPaymentID {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyyMMdd"];
+    [df setDateFormat:@"yyyyMMddHHmm"];
     NSString * dateString = [df stringFromDate:[NSDate date]];
     
-    int value =arc4random_uniform(9999999 + 1);
+    int value =arc4random_uniform(9999 + 1);
     
-    _paymentID = [NSString stringWithFormat:@"AJ%@%@%d", self.paypram.ServiceID, dateString,value];
+    _paymentID = [NSString stringWithFormat:@"DEMO%@%d", dateString, value];
 }
 
 #pragma mark - Setup
@@ -97,10 +93,6 @@ typedef enum {
     
     [self.HostSwitch setOn:NO];
     [self.HostSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-    
-    [self.SaleReq addTarget:self action:@selector(SaleReqBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.QueryReq addTarget:self action:@selector(QueryReqBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.Reversal addTarget:self action:@selector(ReversalReqBtn:) forControlEvents:UIControlEventTouchUpInside];
     
     [self setupTextFieldValue];
 }
@@ -127,16 +119,6 @@ typedef enum {
     //    paypram.CardExp = @"1020";
     //    paypram.CardHolder = @"YAM TEE YEN";
     //    paypram.CardNo = @"5401190420329107";
-    
-    self.paypram.MerchantReturnURL = @"https://test2pay.ghl.com/IPGSimulatorJeff/RespFrmGW.aspx";
-    self.paypram.MerchantCallBackURL = @"https://test2pay.ghl.com/IPGSimulatorJeff/RespFrmGW.aspx";
-    
-    self.paypram.CustPhone = @"0123456789";
-    self.paypram.LanguageCode = @"EN";
-    self.paypram.PaymentDesc = @"Buy something 会心";
-    self.paypram.PageTimeout = @"600";
-
-    self.paypram.PymtMethod = @"ANY";
     
     /* SDK Timer
      * seconds
@@ -204,19 +186,31 @@ typedef enum {
 }
 
 #pragma mark - Action
-- (void)SaleReqBtn:(UIButton *)btnSale {
+- (IBAction)SaleReqBtn:(UIButton *)btnSale {
     [self.view endEditing:YES];
+    
+    self.paypram.TransactionType = @"SALE";
+
+    self.paypram.CustEmail = @"somebody@somesite.com";
+    self.paypram.CustName = @"Somebody";
+    
+    self.paypram.MerchantReturnURL = @"SDK"; // Just put any dummy string, cannot be empty
+//    self.paypram.MerchantCallBackURL = @"https://abc.com/callback";
+    
+    self.paypram.CustPhone = @"0123456789";
+    self.paypram.LanguageCode = @"EN";
+    self.paypram.PaymentDesc = @"just buy something";
+    self.paypram.PageTimeout = @"600";
     
     [self generateNewPaymentID];
     self.paypram.PaymentID = self.paymentID;
     self.paypram.OrderNumber = self.paymentID;
 
-    NSLog(@"Amount:%@ Merchant:%@ Email:%@ Customer:%@ ServiceID:%@ Password:%@ Currency:%@ TokenType:%@ Token:%@ PayMethod:%@ Bank:%@ PaymentID:%@ OrderNumber:%@",
-          self.paypram.Amount,self.paypram.MerchantName,self.paypram.CustEmail,self.paypram.CustName,self.paypram.ServiceID,self.paypram.Password,self.paypram.CurrencyCode,self.paypram.TokenType,self.paypram.Token,self.paypram.PymtMethod,self.paypram.IssuingBank,self.paypram.PaymentID,self.paypram.OrderNumber);
+    NSLog(@"\n%@", [ShowViewController displayRequestParam:self.paypram]);
     ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
     [self.navigationController pushViewController:Payviewcontroller animated:YES];
 }
-- (void)QueryReqBtn:(UIButton *)btnSale {
+- (IBAction)QueryReqBtn:(UIButton *)btnSale {
     /*************************************
      Query current transaction status.
      TxnStatus:
@@ -232,32 +226,52 @@ typedef enum {
      **************************************/
     [self.view endEditing:YES];
 
+    self.paypram.TransactionType = @"query";
     self.paypram.PaymentID = self.paymentID;
     self.paypram.OrderNumber = self.paymentID;
     
-    [self.eghlpay EGHLRequestQuery:self.paypram successBlock:^(PaymentRespPARAM* ParamData) {
-        NSLog(@"TxnExists:%@,QueryDesc:%@,TransactionType:%@,PymtMethod:%@,ServiceID:%@,PaymentID:%@,OrderNumber:%@,Amount:%@ \
-              CurrencyCode:%@,TxnID:%@,IssuingBank:%@,AuthCode:%@,TxnStatus:%@,BankRefNo:%@,TxnMessage:%@,HashValue:%@,SessionID:%@",\
-              ParamData.TxnExists,ParamData.QueryDesc,ParamData.TransactionType,ParamData.PymtMethod,ParamData.ServiceID,ParamData.PaymentID,ParamData.OrderNumber,ParamData.Amount,ParamData.CurrencyCode,ParamData.TxnID,ParamData.IssuingBank,ParamData.AuthCode,\
-              ParamData.TxnStatus,ParamData.BankRefNo,ParamData.TxnMessage,ParamData.HashValue,ParamData.SessionID);
+    [self.eghlpay paymentAPI:self.paypram successBlock:^(PaymentRespPARAM* paramData) {
+        NSLog(@"\n%@", [ShowViewController displayResponseParam:paramData]);
     } failedBlock:^(NSString *errorCode, NSString *errorData) {
         NSLog(@"respdata:%@",errorData);
     }];
 }
 
-- (void)ReversalReqBtn:(UIButton *)btnSale {
+- (IBAction)preAuthReqBtn:(UIButton *)btnSale {
     [self.view endEditing:YES];
-
+    
+    self.paypram.TransactionType = @"AUTH";
+    
+    self.paypram.CustEmail = @"somebody@somesite.com";
+    self.paypram.CustName = @"Somebody";
+    
+    self.paypram.MerchantReturnURL = @"SDK"; // Just put any dummy string, cannot be empty
+    //    self.paypram.MerchantCallBackURL = @"https://abc.com/callback";
+    
+    self.paypram.CustPhone = @"0123456789";
+    self.paypram.LanguageCode = @"EN";
+    self.paypram.PaymentDesc = @"just buy something";
+    self.paypram.PageTimeout = @"600";
+    
+    [self generateNewPaymentID];
     self.paypram.PaymentID = self.paymentID;
     self.paypram.OrderNumber = self.paymentID;
     
-    [self.eghlpay EGHLRequestReversal:self.paypram successBlock:^(PaymentRespPARAM* ParamData) {
-        NSLog(@"TxnExists:%@,QueryDesc:%@,TransactionType:%@,PymtMethod:%@,ServiceID:%@,PaymentID:%@,OrderNumber:%@,Amount:%@ \
-              CurrencyCode:%@,TxnID:%@,IssuingBank:%@,AuthCode:%@,TxnStatus:%@,BankRefNo:%@,TxnMessage:%@,HashValue:%@,SessionID:%@",\
-              ParamData.TxnExists,ParamData.QueryDesc,ParamData.TransactionType,ParamData.PymtMethod,ParamData.ServiceID,ParamData.PaymentID,ParamData.OrderNumber,ParamData.Amount,ParamData.CurrencyCode,ParamData.TxnID,ParamData.IssuingBank,ParamData.AuthCode,\
-              ParamData.TxnStatus,ParamData.BankRefNo,ParamData.TxnMessage,ParamData.HashValue,ParamData.SessionID);
+    NSLog(@"\n%@", [ShowViewController displayRequestParam:self.paypram]);
+    ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
+    [self.navigationController pushViewController:Payviewcontroller animated:YES];
+}
+
+- (IBAction)captureReqBtn:(UIButton *)btnSale {
+    [self.view endEditing:YES];
+    
+    self.paypram.TransactionType = @"CAPTURE";
+    self.paypram.PaymentID = self.paymentID;
+    
+    [self.eghlpay paymentAPI:self.paypram successBlock:^(PaymentRespPARAM *paramData) {
+        NSLog(@"\n%@", [ShowViewController displayResponseParam:paramData]);
     } failedBlock:^(NSString *errorCode, NSString *errorData) {
-        NSLog(@"respdata:%@",errorData);
+        NSLog(@"errordata:%@",errorData);
     }];
 }
 
@@ -265,34 +279,19 @@ typedef enum {
 - (IBAction)masterPassButtonPressed:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    self.paypram.ServiceID = @"om2";
-    self.paypram.Password = @"om212345";
-    
     self.paypram.TokenType = @"MPE";
-    
     self.paypram.Token = @"somebodyLoginID"; // Comsumer's login ID to merchant System
+    
     self.paypram.PaymentDesc = @"Testing MasterPass 会心";
     self.paypram.Amount = @"10.00";
     
     self.paypram.CurrencyCode = @"MYR";
     
-    /**
-     Lightbox Paramter reference
-     https://developer.mastercard.com/page/masterpass-lightbox-parameters
-     */
-    self.paypram.mpLightboxParameter = @{
-                                         @"merchantCheckoutId":@"", //id from masterpass
-                                         @"failureCallback":@"", // http://...
-                                         @"callbackUrl":@"", // http://...
-                                         @"cancelCallback":@"", // http://...
-
-                                         };
-    //---------------
-    
     [self.eghlpay eGHLMPERequest:self.paypram successBlock:^(PaymentRespPARAM* paramData) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-	    self.paypram.PaymentID = self.paymentID;
-    	self.paypram.OrderNumber = self.paymentID;
+        [self generateNewPaymentID];
+        self.paypram.PaymentID = self.paymentID;
+        self.paypram.OrderNumber = self.paymentID;
 
         if (paramData.PreCheckoutId && paramData.Cards.count > 0) {
             self.listOfCard = paramData.Cards;
@@ -312,8 +311,41 @@ typedef enum {
             UIView * custom = [self.view superview];
             [ac showFromRect:self.view.frame inView:custom animated:YES];
         } else {
+            /**
+             Normal Request Payment Parameter + Tokens
+             */
+            self.paypram.TransactionType = @"SALE";
+            
+            self.paypram.CustEmail = @"somebody@somesite.com";
+            self.paypram.CustName = @"Somebody";
+            
+            self.paypram.MerchantReturnURL = @"SDK"; // Just put any dummy string, cannot be empty
+            //    self.paypram.MerchantCallBackURL = @"https://abc.com/callback";
+            
+            self.paypram.CustPhone = @"0123456789";
+            self.paypram.LanguageCode = @"EN";
+            self.paypram.PaymentDesc = @"just buy something";
+            self.paypram.PageTimeout = @"600";
+            
+            [self generateNewPaymentID];
+            self.paypram.PaymentID = self.paymentID;
+            self.paypram.OrderNumber = self.paymentID;
+            
             self.paypram.PairingToken = paramData.PairingToken;
             self.paypram.ReqToken = paramData.ReqToken;
+            
+            /**
+             Lightbox Paramter reference
+             https://developer.mastercard.com/page/masterpass-lightbox-parameters
+             */
+            self.paypram.mpLightboxParameter = @{
+                                                 @"merchantCheckoutId":@"", //id from masterpass
+                                                 @"failureCallback":@"", // http://...
+                                                 @"callbackUrl":@"", // http://...
+                                                 @"cancelCallback":@"", // http://...
+                                                 
+                                                 };
+            //---------------
             
             ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
             [self.navigationController pushViewController:Payviewcontroller animated:YES];
