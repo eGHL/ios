@@ -18,7 +18,7 @@
 typedef void (^onPaymentRequest)(PaymentRequestPARAM* RequestData);
 typedef void (^onPaymentResp)(PaymentRespPARAM* ParamData);
 typedef void (^onSuccessResp)(NSString* SuccessData);
-typedef void (^onErrorCB)(NSString* errorCode,NSString* errorData);
+typedef void (^onErrorCB)(NSString* errorCode, NSString* errorData, NSError * error);
 @interface EGHLPayment : UIView<UIWebViewDelegate>
 
 @property (nonatomic, weak) id <eGHLDelegate> delegate;
