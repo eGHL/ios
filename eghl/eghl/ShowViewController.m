@@ -86,9 +86,17 @@ typedef enum {
         [av show];
 
         
-    } failedBlock:^(NSString *errorCode, NSString *errorData) {
-        NSLog(@"errordata:%@",errorData);
-        UIAlertView * av = [[UIAlertView alloc] initWithTitle:@"Payment Status" message:errorData delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    } failedBlock:^(NSString *errorCode, NSString *errorData, NSError * error) {
+        NSLog(@"errordata:%@ (%@)", errorData, errorCode);
+        
+        if (error) {
+            NSString * urlstring = [error userInfo][@"NSErrorFailingURLKey"];
+            if (urlstring) {
+                NSLog(@"NSErrorFailingURLKey:%@",urlstring);
+            }
+        }
+        
+        UIAlertView * av = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Error (%@)", errorCode] message:errorData delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         av.tag = tagAVResult;
         [av show];
     }];

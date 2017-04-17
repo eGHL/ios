@@ -232,7 +232,7 @@ typedef enum {
     
     [self.eghlpay paymentAPI:self.paypram successBlock:^(PaymentRespPARAM* paramData) {
         NSLog(@"\n%@", [ShowViewController displayResponseParam:paramData]);
-    } failedBlock:^(NSString *errorCode, NSString *errorData) {
+    } failedBlock:^(NSString *errorCode, NSString *errorData, NSError * error) {
         NSLog(@"respdata:%@",errorData);
     }];
 }
@@ -270,7 +270,7 @@ typedef enum {
     
     [self.eghlpay paymentAPI:self.paypram successBlock:^(PaymentRespPARAM *paramData) {
         NSLog(@"\n%@", [ShowViewController displayResponseParam:paramData]);
-    } failedBlock:^(NSString *errorCode, NSString *errorData) {
+    } failedBlock:^(NSString *errorCode, NSString *errorData, NSError * error) {
         NSLog(@"errordata:%@",errorData);
     }];
 }
@@ -350,7 +350,7 @@ typedef enum {
             ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
             [self.navigationController pushViewController:Payviewcontroller animated:YES];
         }
-    } failedBlock:^(NSString *errorCode, NSString *errorData) {
+    } failedBlock:^(NSString *errorCode, NSString *errorData, NSError * error) {
         NSLog(@"errorCode:%@", errorCode);
         NSLog(@"errorData:%@", errorData);
         

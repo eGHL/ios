@@ -6,6 +6,10 @@
 
 ****
 # **Change Log** 
+### [**v1.9.1](https://bitbucket.org/eghl/ios/commits/tag/v1.9.1)
+* Fixed issue #1: Unable to make CC payment in staging
+* added NSError in failed Block (onErrorCB) 	
+
 ### [**v1.9](https://bitbucket.org/eghl/ios/commits/tag/v1.9)
 **SDK**
 
