@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v1.9.2](https://bitbucket.org/eghl/ios/commits/tag/v1.9.2)
+* Fixed #2: calling finalizeTransaction wont trigger block
+
 ### [**v1.9.1](https://bitbucket.org/eghl/ios/commits/tag/v1.9.1)
 * Fixed issue #1: Unable to make CC payment in staging
 * added NSError in failed Block (onErrorCB) 	
