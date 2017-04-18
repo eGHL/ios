@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v1.9.3](https://bitbucket.org/eghl/ios/commits/tag/v1.9.3)
+* Fixed issue where SDK timer still running after transaction had finalise
+
 ### [**v1.9.2](https://bitbucket.org/eghl/ios/commits/tag/v1.9.2)
 * Fixed #2: calling finalizeTransaction wont trigger block
 

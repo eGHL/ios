@@ -116,10 +116,6 @@ typedef enum {
     
     [self setupServiceForRealHost:NO];
     
-    //    paypram.CardExp = @"1020";
-    //    paypram.CardHolder = @"YAM TEE YEN";
-    //    paypram.CardNo = @"5401190420329107";
-    
     /* SDK Timer
      * seconds
      self.paypram.sdkTimeOut = 60*1; // 1 minutes
