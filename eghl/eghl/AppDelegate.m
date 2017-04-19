@@ -22,8 +22,7 @@
     self.viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
     self.navPayment = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     self.window.rootViewController = self.navPayment;
-    [self.window makeKeyAndVisible];    
-    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
