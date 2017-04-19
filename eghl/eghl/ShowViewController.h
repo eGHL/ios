@@ -10,12 +10,10 @@
 #import "EGHLPayment.h"
 
 
-@interface ShowViewController : UIViewController<eGHLDelegate>{
-    PaymentRequestPARAM *paypram;
-}
+@interface ShowViewController : UIViewController<eGHLDelegate>
 
 -(id)initWithValue:(PaymentRequestPARAM *)payment;
 + (NSString *)displayResponseParam:(PaymentRespPARAM *)respParam;
 + (NSString *)displayRequestParam:(PaymentRequestPARAM *)reqParam;
-@property (strong, nonatomic) PaymentRequestPARAM *paypram;
+@property (nonatomic, weak) EGHLPayment *eghlpay;
 @end

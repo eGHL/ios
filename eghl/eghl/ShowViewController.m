@@ -13,18 +13,17 @@ typedef enum {
 }tagForAlerView;
 
 @interface ShowViewController () <UIAlertViewDelegate>
-@property (nonatomic, strong) EGHLPayment *eghlpay;
+@property (weak, nonatomic) PaymentRequestPARAM *paypram;
 @end
 
 @implementation ShowViewController
-@synthesize paypram;
 
 -(id)initWithValue:(PaymentRequestPARAM *)payment
 {
     self = [super init];
     
     if (self) {
-        paypram = payment;
+        _paypram = payment;
     }
     
     return self;
@@ -71,8 +70,7 @@ typedef enum {
     // ------------------
     
     [self.view addSubview:self.eghlpay];
-        
-    [self.eghlpay paymentAPI:paypram successBlock:^(PaymentRespPARAM * result) {
+    [self.eghlpay paymentAPI:self.paypram successBlock:^(PaymentRespPARAM * result) {
         NSString * resultString;
         
         if ([result.mpLightboxError isKindOfClass:[NSDictionary class]]) {
@@ -102,12 +100,6 @@ typedef enum {
     }];
 }
 
-- (EGHLPayment *)eghlpay {
-    if (!_eghlpay) {
-        _eghlpay = [[EGHLPayment alloc] init];
-    }
-    return _eghlpay;
-}
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
