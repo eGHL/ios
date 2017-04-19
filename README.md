@@ -6,6 +6,10 @@
 
 ****
 # **Change Log** 
+### [**v1.9.4](https://bitbucket.org/eghl/ios/commits/tag/v1.9.4)
+* fixed apps will hang when calling [`eGHLMPERequest:successBlock:failedBlock`](https://bitbucket.org/eghl/ios/src/05484478c5672c89f3de871062555d4e9db4ee4d/Library/EGHLPayment.h?at=master&fileviewer=file-view-default#EGHLPayment.h-30,31,32,33,34,35,36,37,38,39 "View function"). 
+* fixed reopen issue "SDK timer still running after transaction had finalise"
+
 ### [**v1.9.3](https://bitbucket.org/eghl/ios/commits/tag/v1.9.3)
 * Fixed issue where SDK timer still running after transaction had finalise
 
