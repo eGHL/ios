@@ -370,7 +370,11 @@ typedef enum {
                         self.paypram.PreCheckoutId = self.preCheckoutID;
                         self.paypram.CardId = cardDict[@"CardId"];
                         
+                        self.paypram.TransactionType=@"SALE";
+                        self.paypram.MerchantReturnURL = @"abc";
+                        
                         ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
+                        Payviewcontroller.eghlpay = self.eghlpay;
                         [self.navigationController pushViewController:Payviewcontroller animated:YES];
 
                         break;
