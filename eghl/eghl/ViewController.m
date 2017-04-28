@@ -255,6 +255,7 @@ typedef enum {
     
     NSLog(@"\n%@", [ShowViewController displayRequestParam:self.paypram]);
     ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
+    Payviewcontroller.eghlpay = self.eghlpay;
     [self.navigationController pushViewController:Payviewcontroller animated:YES];
 }
 
@@ -344,6 +345,7 @@ typedef enum {
             //---------------
             
             ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
+            Payviewcontroller.eghlpay = self.eghlpay;
             [self.navigationController pushViewController:Payviewcontroller animated:YES];
         }
     } failedBlock:^(NSString *errorCode, NSString *errorData, NSError * error) {
