@@ -67,6 +67,16 @@ typedef enum {
     messageLabel.frame = frame;
 
     self.eghlpay.loadingMessageLabel = messageLabel;
+    /* ------------------
+     * [OPTIONAL]
+     * setup finalise message
+     * ------------------ */
+    self.eghlpay.finaliseMessage = @"Verifying payment...";
+    /* ------------------
+     * [OPTIONAL]
+     * setup masterpass lightbox loading message
+     * ------------------ */
+    self.eghlpay.loadingMPLightBoxMessage = @"Redirecting to Masterpass...";
     // ------------------
     
     [self.view addSubview:self.eghlpay];
