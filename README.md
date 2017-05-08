@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v1.9.6](https://bitbucket.org/eghl/ios/commits/tag/v1.9.5)
+* added [options](https://bitbucket.org/eghl/ios/src/80e843168462c8e878b374bbc275050e84657d7a/Library/EGHLPayment.h?fileviewer=file-view-default#EGHLPayment.h-27,28 "view options") to set customise message for finalising transaction & loding master pass transcation 
+
 ### [**v1.9.5](https://bitbucket.org/eghl/ios/commits/tag/v1.9.5)
 * fixed issue #3 & #4 
 
