@@ -193,8 +193,22 @@ typedef enum {
     
     for (NSString * key in @[@"Amount",@"AuthCode",@"BankRefNo",@"CardExp",@"CardHolder",@"CardNoMask",@"CardType",@"CurrencyCode",@"EPPMonth",@"EPP_YN",@"HashValue",@"HashValue2",@"IssuingBank",@"OrderNumber",@"PromoCode",@"PromoOriAmt",@"Param6",@"Param7",@"PaymentID",@"PymtMethod",@"QueryDesc",@"ServiceID",@"SessionID",@"SettleTAID",@"TID",@"TotalRefundAmount",@"Token",@"TokenType",@"TransactionType",@"TxnExists",@"TxnID",@"TxnMessage",@"TxnStatus",@"ReqToken",@"PairingToken",@"PreCheckoutId",@"Cards",@"mpLightboxError"]) {
         NSString * value = [respParam valueForKey:key];
-        if (value.length>0) {
+        
+        if ([value isKindOfClass:[NSString class]] && value.length>0) {
             [message appendFormat:@"%@: %@\n", key,value];
+        } else if ([value isKindOfClass:[NSArray class]] || [value isKindOfClass:[NSDictionary class]]) {
+            NSError *error;
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:value
+                                                               options:0 //NSJSONWritingPrettyPrinted for readability
+                                                                 error:&error];
+            
+            if (jsonData) {
+                NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                jsonString = [jsonString stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
+                
+                [message appendFormat:@"%@: %@\n", key, jsonString];
+            }
+            
         }
     }
         
