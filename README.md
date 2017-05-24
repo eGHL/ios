@@ -6,6 +6,10 @@
 
 ****
 # **Change Log** 
+### [**v1.9.7](https://bitbucket.org/eghl/ios/commits/tag/v1.9.7)
+* Fixed query trigger in Scenario 1
+* Fixed webview still loading eghl payment page eventhough the user already exit the SDK
+
 ### [**v1.9.6](https://bitbucket.org/eghl/ios/commits/tag/v1.9.6)
 * added [options](https://bitbucket.org/eghl/ios/src/80e843168462c8e878b374bbc275050e84657d7a/Library/EGHLPayment.h?fileviewer=file-view-default#EGHLPayment.h-27,28 "view options") to set customise message for finalising transaction & loading MasterPass transaction 
 
