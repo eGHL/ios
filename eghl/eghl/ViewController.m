@@ -132,8 +132,8 @@ typedef enum {
 
     if (realHost) {
         self.paypram.MerchantName = @"eGHL Payment";
-        self.paypram.Password = @"Gh1eG3H1";
-        self.paypram.ServiceID = @"GHL";
+        self.paypram.Password = @"";
+        self.paypram.ServiceID = @"";
         
         [self setupTextFieldValue];
     } else {

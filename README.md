@@ -6,6 +6,11 @@
 
 ****
 # **Change Log** 
+### [**v1.9.8](https://bitbucket.org/eghl/ios/commits/tag/v1.9.8)
+* Fixed delay sdk close for Masterpass express checkout not working if eGHL landing page shows awkward page
+* Fixed exiting sdk will still load the url for certain situation. 
+* Fixed: making payment immediately after user cancel masterpass express checkout will return "Buyer cancel"
+
 ### [**v1.9.7](https://bitbucket.org/eghl/ios/commits/tag/v1.9.7)
 * Fixed query trigger in Scenario 1
 * For Scenario 1 - masterpass express checkout, now user will need to wait for eghl landing page to finish load before they exit the SDK.
