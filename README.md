@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v1.9.9](https://bitbucket.org/eghl/ios/commits/tag/v1.9.9)
+* Fixed issue where SDK timer still running after transaction had finalise for Masterpass express checkout
+
 ### [**v1.9.8](https://bitbucket.org/eghl/ios/commits/tag/v1.9.8)
 * Fixed delay sdk close for Masterpass express checkout not working if eGHL landing page shows awkward page
 * Fixed exiting sdk will still load the url for certain situation. 
