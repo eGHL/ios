@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v1.9.9rv1](https://bitbucket.org/eghl/ios/commits/tag/v1.9.9rv1)
+* enabled bitcode
+
 ### [**v1.9.9](https://bitbucket.org/eghl/ios/commits/tag/v1.9.9)
 * Fixed issue where SDK timer still running after transaction had finalise for Masterpass express checkout
 
