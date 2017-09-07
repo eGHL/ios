@@ -93,7 +93,9 @@ typedef enum {
         av.tag = tagAVResult;
         [av show];
 
-        
+        if ([result.rawResponseDict isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"result.rawResponseDict:%@",result.rawResponseDict);
+        }
     } failedBlock:^(NSString *errorCode, NSString *errorData, NSError * error) {
         NSLog(@"errordata:%@ (%@)", errorData, errorCode);
         
