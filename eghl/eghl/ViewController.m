@@ -138,8 +138,8 @@ typedef enum {
         [self setupTextFieldValue];
     } else {
         self.paypram.MerchantName = @"eGHL Payment Testing";
-        self.paypram.Password = @"ghl12345";
-        self.paypram.ServiceID = @"GHL";
+        self.paypram.Password = @"sit12345";
+        self.paypram.ServiceID = @"SIT";
 
         
         [self setupTextFieldValue];
@@ -191,7 +191,8 @@ typedef enum {
     self.paypram.CustName = @"Somebody";
     
     self.paypram.MerchantReturnURL = @"SDK"; // Just put any dummy string, cannot be empty
-//    self.paypram.MerchantCallBackURL = @"https://abc.com/callback";
+//    self.paypram.MerchantReturnURL = @"http://example.com/returnURL=1";
+//    self.paypram.MerchantCallBackURL = @"http://example.com/callbackURL=1";
     
     self.paypram.CustPhone = @"0123456789";
     self.paypram.LanguageCode = @"EN";
@@ -201,6 +202,9 @@ typedef enum {
     [self generateNewPaymentID];
     self.paypram.PaymentID = self.paymentID;
     self.paypram.OrderNumber = self.paymentID;
+    
+    // To trigger return URL upon transaction process completed
+//    self.paypram.shouldTriggerReturnURL = YES;
 
     NSLog(@"\n%@", [ShowViewController displayRequestParam:self.paypram]);
     ShowViewController *Payviewcontroller = [[ShowViewController alloc] initWithValue:self.paypram];
