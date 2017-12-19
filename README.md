@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v1.9.11](https://bitbucket.org/eghl/ios/commits/tag/v1.9.11)
+* Fixed "+" showing in `TxnMessage`  
+
 ### [**v1.9.10](https://bitbucket.org/eghl/ios/commits/tag/v1.9.10)
 * Fixed instance response not working when MerchantReturnUrl Contains GET parameter
 * Added raw response ([rawResponseDict](https://bitbucket.org/eghl/ios/src/1c446c60a49748ad36265fb7126a626b924ce0f2/Library/EGHLPayment.h?at=master&fileviewer=file-view-default#EGHLPayment.h-260)) 
