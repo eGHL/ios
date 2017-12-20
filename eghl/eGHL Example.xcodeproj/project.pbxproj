@@ -241,6 +241,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = eghl;
 				TargetAttributes = {
+					048DF5921A6F925F0080BA99 = {
+						DevelopmentTeam = DN554RS36R;
+					};
 					048DF5AD1A6F925F0080BA99 = {
 						TestTargetID = 048DF5921A6F925F0080BA99;
 					};
@@ -417,7 +420,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = DN554RS36R;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eghl/eGHL Example-Prefix.pch";
 				INFOPLIST_FILE = "eghl/eGHL Example-Info.plist";
@@ -438,7 +442,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = DN554RS36R;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eghl/eGHL Example-Prefix.pch";
 				INFOPLIST_FILE = "eghl/eGHL Example-Info.plist";
