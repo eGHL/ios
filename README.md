@@ -6,9 +6,11 @@
 
 ****
 # **Change Log** 
+### [**v1.9.13](https://bitbucket.org/eghl/ios/commits/tag/v1.9.13)
+* Allow merchant to send HashValue  
+
 ### [**v1.9.12](https://bitbucket.org/eghl/ios/commits/tag/v1.9.12)
 * Fixed issue webview will keep on redirecting whenever user return back the app after minimizing it in order to get the OTP code  
-
 
 ### [**v1.9.11](https://bitbucket.org/eghl/ios/commits/tag/v1.9.11)
 * Fixed "+" showing in `TxnMessage`  
