@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBC72E0E20D0D9AC006FA67B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC72E0D20D0D9AC006FA67B /* AppDelegate.m */; };
+		CBC72E1120D0D9AC006FA67B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC72E1020D0D9AC006FA67B /* ViewController.m */; };
+		CBC72E1420D0D9AC006FA67B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC72E1220D0D9AC006FA67B /* Main.storyboard */; };
+		CBC72E1620D0D9AE006FA67B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC72E1520D0D9AE006FA67B /* Assets.xcassets */; };
+		CBC72E1920D0D9AE006FA67B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC72E1720D0D9AE006FA67B /* LaunchScreen.storyboard */; };
+		CBC72E1C20D0D9AE006FA67B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC72E1B20D0D9AE006FA67B /* main.m */; };
+		CBC72E2420D0DCA3006FA67B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC72E2220D0DCA3006FA67B /* MBProgressHUD.m */; };
+		CBC72E2820D0DD58006FA67B /* EGHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC72E2720D0DD58006FA67B /* EGHL.framework */; };
+		CBC72E2A20D0DD66006FA67B /* EGHL.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBC72E2920D0DD66006FA67B /* EGHL.bundle */; };
+		CBC72E2C20D0DE3F006FA67B /* EGHL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBC72E2720D0DD58006FA67B /* EGHL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBC72E2B20D0DDDF006FA67B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CBC72E2C20D0DE3F006FA67B /* EGHL.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CBC72E0920D0D9AC006FA67B /* eGHL Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eGHL Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC72E0C20D0D9AC006FA67B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CBC72E0D20D0D9AC006FA67B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CBC72E0F20D0D9AC006FA67B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CBC72E1020D0D9AC006FA67B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CBC72E1320D0D9AC006FA67B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBC72E1520D0D9AE006FA67B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBC72E1820D0D9AE006FA67B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBC72E1A20D0D9AE006FA67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC72E1B20D0D9AE006FA67B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBC72E2220D0DCA3006FA67B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		CBC72E2320D0DCA3006FA67B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		CBC72E2720D0DD58006FA67B /* EGHL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGHL.framework; path = ../SDK/EGHL.framework; sourceTree = "<group>"; };
+		CBC72E2920D0DD66006FA67B /* EGHL.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EGHL.bundle; path = ../../SDK/EGHL.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBC72E0620D0D9AC006FA67B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC72E2820D0DD58006FA67B /* EGHL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBC72E0020D0D9AC006FA67B = {
+			isa = PBXGroup;
+			children = (
+				CBC72E0B20D0D9AC006FA67B /* eGHL Example */,
+				CBC72E0A20D0D9AC006FA67B /* Products */,
+				CBC72E2620D0DD58006FA67B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CBC72E0A20D0D9AC006FA67B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBC72E0920D0D9AC006FA67B /* eGHL Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBC72E0B20D0D9AC006FA67B /* eGHL Example */ = {
+			isa = PBXGroup;
+			children = (
+				CBC72E2920D0DD66006FA67B /* EGHL.bundle */,
+				CBC72E2520D0DCA8006FA67B /* Ext Lib */,
+				CBC72E0C20D0D9AC006FA67B /* AppDelegate.h */,
+				CBC72E0D20D0D9AC006FA67B /* AppDelegate.m */,
+				CBC72E0F20D0D9AC006FA67B /* ViewController.h */,
+				CBC72E1020D0D9AC006FA67B /* ViewController.m */,
+				CBC72E1220D0D9AC006FA67B /* Main.storyboard */,
+				CBC72E1520D0D9AE006FA67B /* Assets.xcassets */,
+				CBC72E1720D0D9AE006FA67B /* LaunchScreen.storyboard */,
+				CBC72E1A20D0D9AE006FA67B /* Info.plist */,
+				CBC72E1B20D0D9AE006FA67B /* main.m */,
+			);
+			path = "eGHL Example";
+			sourceTree = "<group>";
+		};
+		CBC72E2520D0DCA8006FA67B /* Ext Lib */ = {
+			isa = PBXGroup;
+			children = (
+				CBC72E2320D0DCA3006FA67B /* MBProgressHUD.h */,
+				CBC72E2220D0DCA3006FA67B /* MBProgressHUD.m */,
+			);
+			path = "Ext Lib";
+			sourceTree = "<group>";
+		};
+		CBC72E2620D0DD58006FA67B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBC72E2720D0DD58006FA67B /* EGHL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBC72E0820D0D9AC006FA67B /* eGHL Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC72E1F20D0D9AE006FA67B /* Build configuration list for PBXNativeTarget "eGHL Example" */;
+			buildPhases = (
+				CBC72E2B20D0DDDF006FA67B /* CopyFiles */,
+				CBC72E0520D0D9AC006FA67B /* Sources */,
+				CBC72E0620D0D9AC006FA67B /* Frameworks */,
+				CBC72E0720D0D9AC006FA67B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eGHL Example";
+			productName = "eGHL Example";
+			productReference = CBC72E0920D0D9AC006FA67B /* eGHL Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBC72E0120D0D9AC006FA67B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "GHL ePayments Sdn Bhd";
+				TargetAttributes = {
+					CBC72E0820D0D9AC006FA67B = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = CBC72E0420D0D9AC006FA67B /* Build configuration list for PBXProject "eGHL Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBC72E0020D0D9AC006FA67B;
+			productRefGroup = CBC72E0A20D0D9AC006FA67B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBC72E0820D0D9AC006FA67B /* eGHL Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBC72E0720D0D9AC006FA67B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC72E1920D0D9AE006FA67B /* LaunchScreen.storyboard in Resources */,
+				CBC72E1620D0D9AE006FA67B /* Assets.xcassets in Resources */,
+				CBC72E1420D0D9AC006FA67B /* Main.storyboard in Resources */,
+				CBC72E2A20D0DD66006FA67B /* EGHL.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBC72E0520D0D9AC006FA67B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC72E1120D0D9AC006FA67B /* ViewController.m in Sources */,
+				CBC72E1C20D0D9AE006FA67B /* main.m in Sources */,
+				CBC72E0E20D0D9AC006FA67B /* AppDelegate.m in Sources */,
+				CBC72E2420D0DCA3006FA67B /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBC72E1220D0D9AC006FA67B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC72E1320D0D9AC006FA67B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBC72E1720D0D9AE006FA67B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC72E1820D0D9AE006FA67B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBC72E1D20D0D9AE006FA67B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CBC72E1E20D0D9AE006FA67B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBC72E2020D0D9AE006FA67B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN554RS36R;
+				FRAMEWORK_SEARCH_PATHS = ../SDK;
+				INFOPLIST_FILE = "eGHL Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-ghl.eGHL-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBC72E2120D0D9AE006FA67B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN554RS36R;
+				FRAMEWORK_SEARCH_PATHS = ../SDK;
+				INFOPLIST_FILE = "eGHL Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.e-ghl.eGHL-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBC72E0420D0D9AC006FA67B /* Build configuration list for PBXProject "eGHL Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC72E1D20D0D9AE006FA67B /* Debug */,
+				CBC72E1E20D0D9AE006FA67B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC72E1F20D0D9AE006FA67B /* Build configuration list for PBXNativeTarget "eGHL Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC72E2020D0D9AE006FA67B /* Debug */,
+				CBC72E2120D0D9AE006FA67B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBC72E0120D0D9AC006FA67B /* Project object */;
+}
