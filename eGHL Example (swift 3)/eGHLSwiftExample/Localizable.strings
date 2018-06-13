@@ -1,0 +1,84 @@
+/*
+ Localizable.strings
+ eGHLSwiftExample
+ 
+ Created by Arif Jusoh on 13/06/2018.
+ Copyright © 2018 GHL EPayments. All rights reserved.
+ */
+
+// ------------------ eGHL LocalizedString ------------------
+
+/* ------------------
+ Exit / Back button
+ ------------------ */
+"Are you sure you want to quit" = "Are you sure you want to quit"; // Title
+"Pressing BACK button will close and abandon the payment session." = "Pressing BACK button will close and abandon the payment session."; // Message
+
+/* ------------------
+ Timeout Alert
+ - Alert when payment session timeout (eGHL Payment page in webview)
+ ------------------ */
+"Transaction timed out" = "Transaction timed out?"; // Title
+"Sorry, this transaction has timed out" = "Sorry, this transaction has timed out"; // Message
+
+/* ------------------
+ Preload message
+ - Message appear in preload image when loading sdk's webview
+ ------------------ */
+"Redirecting to Payment Gateway..." = "Redirecting to Payment Gateway...";
+
+/* ------------------
+ Masterpass express checkout lighbox Preload message
+ - Message appear in preload image when loading masterpass lightbox
+ ------------------ */
+"Redirecting to Masterpass..." = "Redirecting to Masterpass...";
+
+/* ------------------
+ Verifying Preload message
+ - Message appear in preload image for scenario 3
+ ------------------ */
+"Verifying payment..." = "Verifying payment...";
+
+/* ------------------
+ Cancel Masterpass express checkout
+ - Message appear in preload image when user exiting masterpass
+ ------------------ */
+"Canceling payment..." = "Canceling payment...";
+
+/* ------------------
+ Card page
+ ------------------ */
+"Done" = "Done"; // General keyboard/picker toolbar close button
+"Previous" = "Previous"; // General keyboard/picker toolbar previous button
+"Next" = "Next"; // General keyboard/picker toolbar next button
+
+
+// - Labels
+"Card Number" = "Card Number"; // Card number label + placeholder
+"Cardholder Name" = "Cardholder Name"; // Card holder
+"Card Types" = "Card Types";
+"CVV" = "CVV"; // Card CVV
+"Expiration Date" = "Expiration Date"; // Card Exp + Datepicker toolbar title
+"Month / Year" = "Month / Year"; // Card exp placeholder
+"Year" = "Year"; // Year placeholder in datepicker
+"Month" = "Month"; // Month placeholder in datepicker
+
+// - Error messages
+"Error" = "Error"; // General Title
+"Please enter your cardholder name" = "Please enter your cardholder name"; // Empty Card holder
+"Please enter your credit card number" = "Please enter your credit card number"; // Empty Card number
+"Please select your credit card expiration date" = "Please select your credit card expiration date"; // unselected Card Exp
+
+"Invalid CVV" = "Invalid CVV"; // Invalid CVV
+"Invalid Credit Card number" = "Invalid Credit Card number"; // Invalid card number
+
+// Switch
+"I agree to have my payment details securely saved for future purchases" = "I agree to have my payment details securely saved for future purchases"; // Customer consent for tokenization
+
+/* ------------------
+ Buttons
+ ------------------ */
+"Cancel" = "Cancel";
+"OK" = "Ok";
+"Proceed" = "Proceed";
+// ------------------ End: eGHL LocalizedString ------------------
