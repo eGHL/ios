@@ -6,9 +6,14 @@
 
 ****
 # **Change Log** 
+### [**v2.0.1](https://bitbucket.org/eghl/ios/commits/tag/v2.0.1)
+* Fixed card holer name not sent to server.
+* Fixed keyboard for not showing for card number & cvv
+
 ### [**v2.0.0](https://bitbucket.org/eghl/ios/commits/tag/v2.0.0)
 * SDK new base.
 * Added Card UI
+
 ### [**v1.9.13](https://bitbucket.org/eghl/ios/commits/tag/v1.9.13)
 * Allow merchant to send HashValue  
 
