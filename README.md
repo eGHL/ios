@@ -6,7 +6,10 @@
 
 ****
 # **Change Log** 
-### [**v2.0.1](https://bitbucket.org/eghl/ios/commits/tag/v2.0.1)
+### [**v2.0.1 rv1](https://bitbucket.org/eghl/ios/commits/tag/v2.0.1)
+* Fixed bitcode is not fully turn on.
+
+### [**v2.0.1]
 * Fixed card holer name not sent to server.
 * Fixed keyboard for not showing for card number & cvv
 
