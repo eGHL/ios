@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v2.1](https://bitbucket.org/eghl/ios/commits/tag/v2.1)
+* Introduce eGHL Optimize.
+
 ### [**v2.0.1 rv1](https://bitbucket.org/eghl/ios/commits/tag/v2.0.1)
 * Fixed bitcode is not fully turn on.
 

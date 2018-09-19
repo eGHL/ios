@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="KGk-i7-Jjw" customClass="EghlCardTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="R5U-KE-1Gm" userLabel="Card Expiry View">
+                        <rect key="frame" x="8" y="11" width="138" height="51"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Expiry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJo-Uu-ZgK">
+                                <rect key="frame" x="15" y="0.0" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="725" verticalCompressionResistancePriority="736" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4N-ea-gU0">
+                                <rect key="frame" x="0.0" y="21" width="138" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zIQ-jB-VIO"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="MM">
+                                            <attributes>
+                                                <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="ArialMT"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="/">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="YYYY">
+                                            <attributes>
+                                                <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="ArialMT"/>
+                                                <font key="NSOriginalFont" size="17" name="ArialMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZJo-Uu-ZgK" secondAttribute="trailing" constant="-15" id="4Od-OU-5wP"/>
+                            <constraint firstAttribute="trailing" secondItem="E4N-ea-gU0" secondAttribute="trailing" id="5tf-vS-vQq"/>
+                            <constraint firstItem="ZJo-Uu-ZgK" firstAttribute="leading" secondItem="R5U-KE-1Gm" secondAttribute="leading" constant="15" id="9C6-th-0jd"/>
+                            <constraint firstItem="E4N-ea-gU0" firstAttribute="leading" secondItem="R5U-KE-1Gm" secondAttribute="leading" id="HvB-U9-Odf"/>
+                            <constraint firstAttribute="height" constant="51" id="M8R-tn-49w"/>
+                            <constraint firstItem="ZJo-Uu-ZgK" firstAttribute="top" secondItem="R5U-KE-1Gm" secondAttribute="top" id="NGb-LA-UPd"/>
+                            <constraint firstItem="E4N-ea-gU0" firstAttribute="top" secondItem="ZJo-Uu-ZgK" secondAttribute="bottom" id="bez-i1-e1H"/>
+                            <constraint firstAttribute="bottom" secondItem="E4N-ea-gU0" secondAttribute="bottom" id="veS-JO-OFC"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Hr5-uq-sxm" userLabel="Card CVV View">
+                        <rect key="frame" x="174" y="11" width="138" height="51"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card CVV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VM-dW-mGN">
+                                <rect key="frame" x="0.0" y="0.0" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdC-sz-7tW">
+                                <rect key="frame" x="0.0" y="21" width="138" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="7VM-dW-mGN" firstAttribute="leading" secondItem="Hr5-uq-sxm" secondAttribute="leading" id="1Kr-wc-w5t"/>
+                            <constraint firstAttribute="trailing" secondItem="7VM-dW-mGN" secondAttribute="trailing" id="Jtr-Dt-erI"/>
+                            <constraint firstItem="tdC-sz-7tW" firstAttribute="leading" secondItem="Hr5-uq-sxm" secondAttribute="leading" id="VZq-V0-I25"/>
+                            <constraint firstItem="tdC-sz-7tW" firstAttribute="top" secondItem="7VM-dW-mGN" secondAttribute="bottom" id="b3z-N2-7yE"/>
+                            <constraint firstAttribute="height" constant="51" id="kEB-aX-oVT"/>
+                            <constraint firstAttribute="bottom" secondItem="tdC-sz-7tW" secondAttribute="bottom" id="t0b-ez-2tl"/>
+                            <constraint firstItem="7VM-dW-mGN" firstAttribute="top" secondItem="Hr5-uq-sxm" secondAttribute="top" id="ySZ-0F-vKj"/>
+                            <constraint firstAttribute="trailing" secondItem="tdC-sz-7tW" secondAttribute="trailing" id="yg7-Re-PhO"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-WQ-lt4">
+                        <rect key="frame" x="154" y="16" width="12" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="c8n-qc-HhV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wdj-WQ-lt4" firstAttribute="centerY" secondItem="R5U-KE-1Gm" secondAttribute="centerY" id="Eyf-xS-fYj"/>
+                    <constraint firstItem="Hr5-uq-sxm" firstAttribute="leading" secondItem="wdj-WQ-lt4" secondAttribute="trailing" constant="8" symbolic="YES" id="I3e-i7-Evv"/>
+                    <constraint firstItem="wdj-WQ-lt4" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="U2B-q3-SFH"/>
+                    <constraint firstItem="wdj-WQ-lt4" firstAttribute="leading" secondItem="R5U-KE-1Gm" secondAttribute="trailing" constant="8" id="WBm-Sh-ex8"/>
+                    <constraint firstItem="wdj-WQ-lt4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gCv-dt-TCy"/>
+                    <constraint firstItem="Hr5-uq-sxm" firstAttribute="centerY" secondItem="R5U-KE-1Gm" secondAttribute="centerY" id="nPt-JI-NpX"/>
+                    <constraint firstItem="R5U-KE-1Gm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pbS-Ym-Dx7"/>
+                    <constraint firstItem="Hr5-uq-sxm" firstAttribute="width" secondItem="R5U-KE-1Gm" secondAttribute="width" id="ux8-jR-geE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="eghl_card_holder"/>
+            <connections>
+                <outlet property="eghlCardExpiryButton" destination="E4N-ea-gU0" id="Zl6-ch-Vap"/>
+                <outlet property="eghlOtherTextField" destination="tdC-sz-7tW" id="3iJ-5m-Uhw"/>
+                <outlet property="eghlOtherTextLabel" destination="7VM-dW-mGN" id="BxR-ML-q3O"/>
+                <outlet property="eghlTextLabel" destination="ZJo-Uu-ZgK" id="JdE-bT-8Sg"/>
+            </connections>
+            <point key="canvasLocation" x="-161" y="-22.5"/>
+        </tableViewCell>
+    </objects>
+</document>

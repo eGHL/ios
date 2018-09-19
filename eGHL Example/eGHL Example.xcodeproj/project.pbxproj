@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBBE9517214B00CF002706CE /* CardPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE9516214B00CF002706CE /* CardPageViewController.m */; };
+		CBBE9519214B0220002706CE /* GeneralTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE9518214B0220002706CE /* GeneralTableCell.xib */; };
+		CBBE951C214B0280002706CE /* CardNumberTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE951B214B0280002706CE /* CardNumberTableCell.xib */; };
+		CBBE951E214B0304002706CE /* CardExpiryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE951D214B0304002706CE /* CardExpiryCell.xib */; };
+		CBBE9520214B036D002706CE /* SectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBE951F214B036D002706CE /* SectionView.xib */; };
 		CBC72E0E20D0D9AC006FA67B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC72E0D20D0D9AC006FA67B /* AppDelegate.m */; };
 		CBC72E1120D0D9AC006FA67B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC72E1020D0D9AC006FA67B /* ViewController.m */; };
 		CBC72E1420D0D9AC006FA67B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC72E1220D0D9AC006FA67B /* Main.storyboard */; };
@@ -33,6 +38,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CBBE9515214B00CF002706CE /* CardPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardPageViewController.h; sourceTree = "<group>"; };
+		CBBE9516214B00CF002706CE /* CardPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardPageViewController.m; sourceTree = "<group>"; };
+		CBBE9518214B0220002706CE /* GeneralTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralTableCell.xib; sourceTree = "<group>"; };
+		CBBE951B214B0280002706CE /* CardNumberTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardNumberTableCell.xib; sourceTree = "<group>"; };
+		CBBE951D214B0304002706CE /* CardExpiryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardExpiryCell.xib; sourceTree = "<group>"; };
+		CBBE951F214B036D002706CE /* SectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionView.xib; sourceTree = "<group>"; };
 		CBC72E0920D0D9AC006FA67B /* eGHL Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eGHL Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC72E0C20D0D9AC006FA67B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CBC72E0D20D0D9AC006FA67B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +72,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CBBE951A214B0226002706CE /* Optimize */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE9515214B00CF002706CE /* CardPageViewController.h */,
+				CBBE9516214B00CF002706CE /* CardPageViewController.m */,
+				CBBE951F214B036D002706CE /* SectionView.xib */,
+				CBBE9518214B0220002706CE /* GeneralTableCell.xib */,
+				CBBE951B214B0280002706CE /* CardNumberTableCell.xib */,
+				CBBE951D214B0304002706CE /* CardExpiryCell.xib */,
+			);
+			path = Optimize;
+			sourceTree = "<group>";
+		};
 		CBC72E0020D0D9AC006FA67B = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +111,7 @@
 				CBC72E0D20D0D9AC006FA67B /* AppDelegate.m */,
 				CBC72E0F20D0D9AC006FA67B /* ViewController.h */,
 				CBC72E1020D0D9AC006FA67B /* ViewController.m */,
+				CBBE951A214B0226002706CE /* Optimize */,
 				CBC72E1220D0D9AC006FA67B /* Main.storyboard */,
 				CBC72E1520D0D9AE006FA67B /* Assets.xcassets */,
 				CBC72E1720D0D9AE006FA67B /* LaunchScreen.storyboard */,
@@ -171,10 +196,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBE9520214B036D002706CE /* SectionView.xib in Resources */,
 				CBC72E1920D0D9AE006FA67B /* LaunchScreen.storyboard in Resources */,
+				CBBE9519214B0220002706CE /* GeneralTableCell.xib in Resources */,
+				CBBE951E214B0304002706CE /* CardExpiryCell.xib in Resources */,
 				CBC72E1620D0D9AE006FA67B /* Assets.xcassets in Resources */,
 				CBC72E1420D0D9AC006FA67B /* Main.storyboard in Resources */,
 				CBC72E2A20D0DD66006FA67B /* EGHL.bundle in Resources */,
+				CBBE951C214B0280002706CE /* CardNumberTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +218,7 @@
 				CBC72E1C20D0D9AE006FA67B /* main.m in Sources */,
 				CBC72E0E20D0D9AC006FA67B /* AppDelegate.m in Sources */,
 				CBC72E2420D0DCA3006FA67B /* MBProgressHUD.m in Sources */,
+				CBBE9517214B00CF002706CE /* CardPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

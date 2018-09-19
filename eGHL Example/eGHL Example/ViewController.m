@@ -223,9 +223,9 @@ typedef enum {
                                  // EGHL_NAV_BAR_BG_COLOR:     [UIColor purpleColor],
                                  // EGHL_CARD_PAGE_BG_COLOR:   [UIColor blueColor]
                                  };
-    // self.payParam.pymtMethod = EGHL_PAYMENT_METHOD_CARD
-    // self.paypram.TokenType = @"OCP";
-    // self.paypram.Token = @"vTlpNhakj24ijZjJaSqd5A==";
+    self.paypram.PymtMethod = EGHL_PAYMENT_METHOD_CARD;
+    self.paypram.TokenType = @"OCP";
+    self.paypram.Token = @"uUekGp3SPBI7upNxBcZjA==";
     
     NSLog(@"\n%@", [ViewController displayRequestParam:self.paypram]);
     [self eGHLAPI];
@@ -258,9 +258,9 @@ typedef enum {
     
     self.paypram.TransactionType = @"AUTH";
     
-    self.paypram.CustEmail = @"somebody@somesite.com";
-    self.paypram.CustName = @"Somebody";
-    
+    self.paypram.CustEmail = @"johndoe@test.com";
+    self.paypram.CustName = @"John Doe";
+
     self.paypram.MerchantReturnURL = @"SDK"; // Just put any dummy string, cannot be empty
     //    self.paypram.MerchantCallBackURL = @"https://abc.com/callback";
     
