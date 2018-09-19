@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char EGHLVersionString[];
 #import <EGHL/EGHLPayment.h>
 #import <EGHL/PaymentRequestPARAM.h>
 #import <EGHL/PaymentRespPARAM.h>
+#import <EGHL/EghlCardTableViewCell.h>
