@@ -12,6 +12,7 @@
 
 @interface EGHLPayment : NSObject
 typedef void (^onSOPTokenResp)(NSString * token, NSString * tokenType, NSString * paymentId);
+typedef void (^onSOPBLResp)(NSDictionary * bankDict);
 
 typedef void (^onPaymentResp)(PaymentRespPARAM * responseData);
 typedef void (^onErrorCB)(NSString* errorCode, NSString* errorData, NSError * error);
@@ -67,4 +68,16 @@ typedef void (^onErrorCB)(NSString* errorCode, NSString* errorData, NSError * er
  *   @discussion    Fetch SOP Token (temporary token for optimize module).
  */
 - (void)fetchSOPTokenSuccess:(onSOPTokenResp)successBlock failed:(onErrorCB)failedBlock;
+
+/**
+ *   @method  fetchSOPBankListWithPaymentRequest:(PaymentRequestPARAM *)paymentRequest success:(onSOPTokenResp)successBlock failedBlock:(onErrorCB)failedBlock
+ *
+ *   @param   paymentRequest    A <code>PaymentRequestPARAM</code> object.
+ *                              include PaymentID, ServiceID, Currency
+ *   @param   successBlock      A success block. Return one time token (token type: SOP)
+ *   @param   failedBlock       A fail block.
+ *
+ *   @discussion    Fetch SOP Token (temporary token for optimize module).
+ */
+- (void)fetchSOPBankListWithPaymentRequest:(PaymentRequestPARAM *)paymentRequest success:(onSOPBLResp)successBlock failed:(onErrorCB)failedBlock;
 @end

@@ -26,6 +26,8 @@
 //---------------------------
 #define EGHL_SHOULD_TRIGGER_RETURN_URL  @"ShouldTriggerReturnURL"
 #define EGHL_DEBUG_PAYMENT_URL          @"EGHLDebugPaymentURL"
+#define EGHL_WEBVIEW_ZOOMING            @"EGHLWebviewZooming"
+
 
 #define EGHL_NAV_BAR_BG_COLOR   @"NavigationBarColor"
 #define EGHL_NAV_BAR_TEXT_COLOR   @"NavigationBarTextColor"

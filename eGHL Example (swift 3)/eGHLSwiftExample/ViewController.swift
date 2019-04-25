@@ -59,6 +59,7 @@ class ViewController: UIViewController {
         
         self.payParam.settingDict = [
             EGHL_DEBUG_PAYMENT_URL: true, // Default: false
+            EGHL_WEBVIEW_ZOOMING: true, // Default: false
             // EGHL_ENABLED_CARD_PAGE: true, // Default: false
             // EGHL_TOKENIZE_REQUIRED: true, // Default: false
             // EGHL_CVV_OPTIONAL:      true, // Default: false

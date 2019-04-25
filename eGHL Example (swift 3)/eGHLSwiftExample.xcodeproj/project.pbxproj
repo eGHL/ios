@@ -14,10 +14,10 @@
 		CB364FAD1E5296FD004007AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB364FAB1E5296FD004007AC /* LaunchScreen.storyboard */; };
 		CB364FB81E5296FD004007AC /* eGHLSwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB364FB71E5296FD004007AC /* eGHLSwiftExampleTests.swift */; };
 		CB364FC31E5296FD004007AC /* eGHLSwiftExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB364FC21E5296FD004007AC /* eGHLSwiftExampleUITests.swift */; };
-		CBC72E2E20D148DB006FA67B /* EGHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC72E2D20D148DB006FA67B /* EGHL.framework */; };
 		CBC72E3020D148E2006FA67B /* EGHL.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBC72E2F20D148E2006FA67B /* EGHL.bundle */; };
-		CBC72E3120D148EB006FA67B /* EGHL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBC72E2D20D148DB006FA67B /* EGHL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBF6B61920D0715A006BDA87 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBF6B61820D0715A006BDA87 /* Localizable.strings */; };
+		D6A67DF022716BFE00CA7625 /* EGHL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6A67DED22716BF700CA7625 /* EGHL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D6A67DF122716C2800CA7625 /* EGHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A67DED22716BF700CA7625 /* EGHL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CBC72E3120D148EB006FA67B /* EGHL.framework in CopyFiles */,
+				D6A67DF022716BFE00CA7625 /* EGHL.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +65,9 @@
 		CB364FC21E5296FD004007AC /* eGHLSwiftExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eGHLSwiftExampleUITests.swift; sourceTree = "<group>"; };
 		CB364FC41E5296FD004007AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB364FD61E529850004007AC /* BridgingForObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingForObjC.h; sourceTree = "<group>"; };
-		CBC72E2D20D148DB006FA67B /* EGHL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGHL.framework; path = ../SDK/EGHL.framework; sourceTree = "<group>"; };
 		CBC72E2F20D148E2006FA67B /* EGHL.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EGHL.bundle; path = ../../SDK/EGHL.bundle; sourceTree = "<group>"; };
 		CBF6B61820D0715A006BDA87 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D6A67DED22716BF700CA7625 /* EGHL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGHL.framework; path = ../SDK/EGHL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBC72E2E20D148DB006FA67B /* EGHL.framework in Frameworks */,
+				D6A67DF122716C2800CA7625 /* EGHL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +154,7 @@
 		CBCCA77320CFD2E200BDBEE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CBC72E2D20D148DB006FA67B /* EGHL.framework */,
+				D6A67DED22716BF700CA7625 /* EGHL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,6 +248,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
