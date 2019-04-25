@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v2.1.1](https://bitbucket.org/eghl/ios/commits/tag/v2.1.1)
+* Allow merchant to enable zooming in webview .
+
 ### [**v2.1](https://bitbucket.org/eghl/ios/commits/tag/v2.1)
 * Introduce eGHL Optimize.
 
