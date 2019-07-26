@@ -6,8 +6,12 @@
 
 ****
 # **Change Log** 
+### [**v2.1.4](https://bitbucket.org/eghl/ios/commits/tag/v2.1.4)
+* Fixed eGHL landing page timer stop counting when the app is minimized or holding the scrolling
+
 ### [**v2.1.3](https://bitbucket.org/eghl/ios/commits/tag/v2.1.3)
 * Fixed zooming issue when focusing on textbox.
+
 ### [**v2.1.2](https://bitbucket.org/eghl/ios/commits/tag/v2.1.2)
 * Fixed some symbol is not fully encoded in URL.
 
