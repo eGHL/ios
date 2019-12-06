@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v2.1.5](https://bitbucket.org/eghl/ios/commits/tag/v2.1.5)
+Fixed Issue #7 - iOS 13 issue - SDK not showing in Full screen
+
 ### [**v2.1.4](https://bitbucket.org/eghl/ios/commits/tag/v2.1.4)
 * Fixed eGHL landing page timer stop counting when the app is minimized or holding the scrolling
 
