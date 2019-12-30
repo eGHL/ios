@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v2.2](https://bitbucket.org/eghl/ios/commits/tag/v2.2)
+Convert UIWebView to WKWebView
+
 ### [**v2.1.5](https://bitbucket.org/eghl/ios/commits/tag/v2.1.5)
 Fixed Issue #7 - iOS 13 issue - SDK not showing in Full screen
 
