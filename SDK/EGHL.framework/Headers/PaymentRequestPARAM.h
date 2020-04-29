@@ -38,6 +38,9 @@
 @property (strong, nonatomic) NSString * PaymentDesc;
 @property (strong, nonatomic) NSString * PageTimeout;
 @property (strong, nonatomic) NSString * CustIP;
+
+@property (strong, nonatomic) NSString * CustID;
+
 @property (strong, nonatomic) NSString * MerchantApprovalURL;
 @property (strong, nonatomic) NSString * CustMAC;
 @property (strong, nonatomic) NSString * MerchantUnApprovalURL;

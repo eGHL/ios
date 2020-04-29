@@ -201,6 +201,7 @@ typedef enum {
     self.paypram.LanguageCode = @"EN";
     self.paypram.PaymentDesc = @"just buy something";
     self.paypram.PageTimeout = @"600";
+    //  self.paypram.CustID = @"12345678";
     
     [self generateNewPaymentID];
     self.paypram.PaymentID = self.paymentID;

@@ -17,7 +17,7 @@
 @property (strong, nonatomic) NSString * CardHolder;
 @property (strong, nonatomic) NSString * CardNoMask;
 @property (strong, nonatomic) NSString * CardType;
-
+@property (strong, nonatomic) NSString * CustID;
 @property (strong, nonatomic) NSString * CurrencyCode;
 
 @property (strong, nonatomic) NSString * EPPMonth;
