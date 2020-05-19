@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v2.2.2](https://bitbucket.org/eghl/ios/commits/tag/v2.2.2)
+Added HashValue parameter
+
 ### [**v2.2.1](https://bitbucket.org/eghl/ios/commits/tag/v2.2.1)
 Added CustID parameter
 
