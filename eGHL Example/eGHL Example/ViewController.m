@@ -197,16 +197,18 @@ typedef enum {
     //    self.paypram.MerchantReturnURL = @"http://example.com/returnURL=1";
     //    self.paypram.MerchantCallBackURL = @"http://example.com/callbackURL=1";
     
+    
     self.paypram.CustPhone = @"0123456789";
     self.paypram.LanguageCode = @"EN";
     self.paypram.PaymentDesc = @"just buy something";
     self.paypram.PageTimeout = @"600";
     //  self.paypram.CustID = @"12345678";
+    //  self.paypram.HashValue = @"";
     
     [self generateNewPaymentID];
     self.paypram.PaymentID = self.paymentID;
     self.paypram.OrderNumber = self.paymentID;
-    
+
     self.paypram.settingDict = @{
                                  EGHL_DEBUG_PAYMENT_URL:[NSNumber numberWithBool:!self.realHost],
                                  // EGHL_ENABLED_CARD_PAGE:         @YES, // Default: NO;
@@ -341,7 +343,6 @@ typedef enum {
             
             self.paypram.MerchantReturnURL = @"SDK"; // Just put any dummy string, cannot be empty
             //    self.paypram.MerchantCallBackURL = @"https://abc.com/callback";
-            
             self.paypram.CustPhone = @"0123456789";
             self.paypram.LanguageCode = @"EN";
             self.paypram.PaymentDesc = @"just buy something";
