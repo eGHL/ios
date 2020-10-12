@@ -6,6 +6,9 @@
 
 ****
 # **Change Log** 
+### [**v2.4](https://bitbucket.org/eghl/ios/commits/tag/v2.4)
+Included EMandate module to SDK
+
 ### [**v2.2.2](https://bitbucket.org/eghl/ios/commits/tag/v2.2.2)
 Added HashValue parameter
 
