@@ -2,124 +2,128 @@
 
 *Software Development Kit (SDK)* makes it easier to integrate your mobile application with eGHL Payment Gateway. This repository is intended as a technical guide for merchant developers and system integrators who are responsible for designing or programming the respective applications to integrate with Payment Gateway.
 
-[eGHL](http://e-ghl.com) 
+# **Configure Xcode project**
 
-****
-# **Change Log** 
-### [**v2.4](https://github.com/eGHL/ios/releases/tag/v2.4)
-Included EMandate module to SDK
+Drag & drop EGHL.bundle & EGHL.framework within it to your Xcode project
 
-### [**v2.2.2](https://github.com/eGHL/ios/releases/tag/v2.2.2)
-Added HashValue parameter
+![4047482560-Screen Shot 2018-06-13 at 10 38 18 AM](https://user-images.githubusercontent.com/46514524/95950323-dfba3280-0e26-11eb-9ac3-282a668b3fb6.png)
+![1382549676-Screen Shot 2018-06-13 at 10 38 34 AM](https://user-images.githubusercontent.com/46514524/95950789-c9f93d00-0e27-11eb-94c1-77fa9d007f9c.png)
 
-### [**v2.2.1](https://github.com/eGHL/ios/releases/tag/v2.2.1)
-Added CustID parameter
 
-### [**v2.2](https://github.com/eGHL/ios/releases/tag/v2.2)
-Convert UIWebView to WKWebView
+Uncheck the box “Copy items if needed” then press finish button on bottom right. This will reduce space in your App.
+![3922570236-Screen Shot 2017-02-14 at 4 35 04 PM](https://user-images.githubusercontent.com/46514524/95950873-e9906580-0e27-11eb-932f-b6777f7a9aa5.png)
 
-### [**v2.1.5](https://github.com/eGHL/ios/releases/tag/v2.1.5)
-Fixed Issue #7 - iOS 13 issue - SDK not showing in Full screen
+## Project Settings
 
-### [**v2.1.4](https://github.com/eGHL/ios/releases/tag/v2.1.4)
-* Fixed eGHL landing page timer stop counting when the app is minimized or holding the scrolling
+Next, we need to include eGHL framework into your apps build.
 
-### [**v2.1.3](https://github.com/eGHL/ios/releases/tag/v2.1.3)
-* Fixed zooming issue when focusing on textbox.
+![3673732560-Screen Shot 2018-06-13 at 10 47 05 AM](https://user-images.githubusercontent.com/46514524/95950911-fb720880-0e27-11eb-8297-052390ee7293.png)
 
-### [**v2.1.2](https://github.com/eGHL/ios/releases/tag/v2.1.2)
-* Fixed some symbol is not fully encoded in URL.
+1. Select `project file` in project navigator
+2. Select `target` in the Project & Target list
+3. Open build phases, click `+` button & select `New Copy Files Phase`. 
+4. Drag the `Copy Files` section on top of `Compile Sources. 
+5. Select `Frameworks` for `Destination` and select .
+6. Click `+` under `Copy Files` section and select `EGHL.framework`.
 
-### [**v2.1.1](https://github.com/eGHL/ios/releases/tag/v2.1.1)
-* Allow merchant to enable zooming in webview.
+\** Ensure that EGHL.framework appear in `Copy Files` and `Link Binary with Libraries`
 
-### [**v2.1](https://github.com/eGHL/ios/releases/tag/v2.1)
-* Introduce eGHL Optimize.
+# **Configure SDK**
 
-### [**v2.0.1 rv1](https://github.com/eGHL/ios/releases/tag/v2.0.1)
-* Fixed bitcode is not fully turn on.
+## **Import SDK**
 
-### [**v2.0.1]
-* Fixed card holer name not sent to server.
-* Fixed keyboard for not showing for card number & cvv
+Import SDK's Public header.
 
-### [**v2.0.0](https://github.com/eGHL/ios/releases/tag/v2.0.0)
-* SDK new base.
-* Added Card UI
+````
+#import <EGHL/EGHL.h>
+````
 
-### [**v1.9.13](https://github.com/eGHL/ios/releases/tag/v1.9.13)
-* Allow merchant to send HashValue  
+## **Prepare request details.**
 
-### [**v1.9.12](https://github.com/eGHL/ios/releases/tag/v1.9.12)
-* Fixed issue webview will keep on redirecting whenever user return back the app after minimizing it in order to get the OTP code  
+### SALE
 
-### [**v1.9.11](https://github.com/eGHL/ios/releases/tag/v1.9.11)
-* Fixed "+" showing in `TxnMessage`  
+````
+PaymentRequestPARAM * payparam = [[PaymentRequestPARAM alloc] init];
+payparam.Amount = ... (Type: NSString) 
+payparam.MerchantName = ... (Type: NSString)
+payparam.CustEmail = ... (Type: NSString) 
+payparam.CustName = ... (Type: NSString) 
+payparam.ServiceID = ... (Type: NSString) 
+payparam.Password = ... (Type: NSString) 
+payparam.CurrencyCode = ... (Type: NSString)
+payparam.PaymentID = ... (Type: NSString)
+payparam.OrderNumber = ... (Type: NSString)
+payparam.MerchantReturnURL = ... (Type: NSString)
+payparam.MerchantCallBackURL = ... (Type: NSString)
+payparam.CustPhone = ... (Type: NSString)
+payparam.LanguageCode = ... (Type: NSString)
+payparam.PageTimeout = ... (Type: NSString)
+payparam.PaymentDesc = ... (Type: NSString)
+payparam.IssuingBank = ... (Type: NSString)
+payparam.PymtMethod = ... (Type: NSString)
+payparam.RealHost = ... (Type: NSString)
+````
 
-### [**v1.9.10](https://github.com/eGHL/ios/releases/tag/v1.9.10)
-* Fixed instance response not working when MerchantReturnUrl Contains GET parameter
-* Added raw response ([rawResponseDict](https://bitbucket.org/eghl/ios/src/1c446c60a49748ad36265fb7126a626b924ce0f2/Library/EGHLPayment.h?at=master&fileviewer=file-view-default#EGHLPayment.h-260)) 
-* Added an options([shouldTriggerReturnURL](https://bitbucket.org/eghl/ios/src/1c446c60a49748ad36265fb7126a626b924ce0f2/Library/EGHLPayment.h?at=master&fileviewer=file-view-default#EGHLPayment.h-147)) to trigger MerchantReturnURL (default is false)
+### QUERY
 
-### [**v1.9.9rv1](https://github.com/eGHL/ios/releases/tag/v1.9.9rv1)
-* enabled bitcode
+````
+PaymentRequestPARAM * payparam = [[PaymentRequestPARAM alloc] init]
+payparam.PymtMethod = ... (Type: NSString) 
+payparam.ServiceID = ... (Type: NSString) 
+payparam.PaymentID = ... (Type: NSString) 
+payparam.Amount = ... (Type: NSString) 
+payparam.CurrencyCode = ... (Type: NSString)
+````
 
-### [**v1.9.9](https://github.com/eGHL/ios/releases/tag/v1.9.9)
-* Fixed issue where SDK timer still running after transaction had finalise for Masterpass express checkout
+## **Allocate eGHLPayment class.**
+````
+EGHLPayment * eghl = [[EGHLPayment alloc] init]
+````
 
-### [**v1.9.8](https://github.com/eGHL/ios/releases/tag/v1.9.8)
-* Fixed delay sdk close for Masterpass express checkout not working if eGHL landing page shows awkward page
-* Fixed exiting sdk will still load the url for certain situation. 
-* Fixed: making payment immediately after user cancel masterpass express checkout will return "Buyer cancel"
+## **Set Transaction Type**
 
-### [**v1.9.7]https://github.com/eGHL/ios/releases/tag/v1.9.7)
-* Fixed query trigger in Scenario 1
-* For Scenario 1 - masterpass express checkout, now user will need to wait for eghl landing page to finish load before they exit the SDK.
-* Fixed webview still loading eghl payment page eventhough the user already exit the SDK
-* Added new property in EGHLPayment: cancelMessage
-* Added new property in PaymentRespPARAM:RespTime
+eg. SALE 
+````
+payparam.TransactionType = EGHL_TRANSACTION_TYPE_SALE;
+````
 
-### [**v1.9.6](https://github.com/eGHL/ios/releases/tag/v1.9.6)
-* added [options](https://bitbucket.org/eghl/ios/src/80e843168462c8e878b374bbc275050e84657d7a/Library/EGHLPayment.h?fileviewer=file-view-default#EGHLPayment.h-27,28 "view options") to set customise message for finalising transaction & loading MasterPass transaction 
+eg. QUERY 
+````
+payparam.TransactionType = EGHL_TRANSACTION_TYPE_QUERY;
+````
 
-### [**v1.9.5](https://github.com/eGHL/ios/releases/tag/v1.9.5)
-* fixed issue #3 & #4 
+## **Load the SDK**
 
-### [**v1.9.4](https://github.com/eGHL/ios/releases/tag/v1.9.4)
-* fixed apps will hang when calling [`eGHLMPERequest:successBlock:failedBlock`](https://bitbucket.org/eghl/ios/src/05484478c5672c89f3de871062555d4e9db4ee4d/Library/EGHLPayment.h?at=master&fileviewer=file-view-default#EGHLPayment.h-30,31,32,33,34,35,36,37,38,39 "View function"). 
-* fixed reopen issue "SDK timer still running after transaction had finalise"
+````
+[eghl execute:payparam fromViewController:self successBlock:^(PaymentRespPARAM *responseData) { 
+    NSLog(@"SuccessData: %@", SuccessData);
+} failedBlock:^(NSString *errorCode, NSString *errorData, NSError *error) { 
+    NSLog(@"errorcode: %@ errordata: %@", errorCode, errorData);
+}];
+````
 
-### [**v1.9.3](https://github.com/eGHL/ios/releases/tag/v1.9.3)
-* Fixed issue where SDK timer still running after transaction had finalise
+\* Please refer PaymentRespPARAM class for possible fields 
 
-### [**v1.9.2](https://github.com/eGHL/ios/releases/tag/v1.9.2)
-* Fixed #2: calling finalizeTransaction wont trigger block
+\* Please refer appendix for fields specification
 
-### [**v1.9.1](https://github.com/eGHL/ios/releases/tag/v1.9.1)
-* Fixed issue #1: Unable to make CC payment in staging
-* added NSError in failed Block (onErrorCB) 	
+## **Possible Error code & Error Data**
 
-### [**v1.9](https://github.com/eGHL/ios/releases/tag/v1.9)
-**SDK**
+Error code | Error Data
+:--------:|:-----------
+-1009|The Internet connection appears to be offline.
+-1001|The request timed out.
+-1|ParametersEmpty
 
-* Added a [general function](https://bitbucket.org/eghl/ios/src/05484478c5672c89f3de871062555d4e9db4ee4d/Library/EGHLPayment.h?at=master&fileviewer=file-view-default#EGHLPayment.h-55,56,57,58,59,60,61,62,63,64,65,66,67 "view changes")  that will support all type of transaction (SALE, AUTH, QUERY, REVERSAL, REFUND, CAPTURE). 
-* Added TransactionType variable in PaymentRequestPARAM
-    
-**DEMO**
+## **Customize String Messages**
 
-* Added [convenient method](https://bitbucket.org/eghl/ios/commits/ddf4fed3379c4bb0e93b9cc4b03815c302a81cf6#chg-eghl/eghl/ShowViewController.h "view functions") in demo app
-* Update UI
-    * added constraints
-    * added new buttons (pre-auth & capture)
+You can customize SDK messages by update the value in `localizable.strings`
 
-### [**v1.8.7](https://github.com/eGHL/ios/releases/tag/v1.8.7)
-* fixed invalid service id
-* added support for MSC in 1st message
-* added option to skip using SDK Masterpass Lightbox [`self.paypram.mpLightboxParameter = nil`](https://bitbucket.org/eghl/ios/src/05484478c5672c89f3de871062555d4e9db4ee4d/eghl/eghl/ViewController.m?at=master&fileviewer=file-view-default#ViewController.m-337,338,339,340,341 "set to nil")
-* fixed finalizeTransaction method not working in certain situation 
-### [**v1.8.6](https://github.com/eGHL/ios/releases/tag/v1.8.6)
-* added extra approach to get instance response in browser (js-json approach)
-* fixed bug on function name finalizeTransaction
+eg.
+```
+...
+"Are you sure you want to quit" = "Really?"; // Title
+"Pressing BACK button will close and abandon the payment session." = "Press ok to confirm"; // Message
+...
 
-### **v1.8.5
-* added function name [finalizeTransaction](https://bitbucket.org/eghl/ios/src/05484478c5672c89f3de871062555d4e9db4ee4d/eghl/eghl/ShowViewController.m?at=master&fileviewer=file-view-default#ShowViewController.m-167 "View code"), this should be call whenever merchant intend to close SDK. Result will return via protocol [QueryResult](https://bitbucket.org/eghl/ios/src/05484478c5672c89f3de871062555d4e9db4ee4d/eghl/eghl/ViewController.m?at=master&fileviewer=file-view-default#ViewController.m-213 "View code")
+```
+>Kindly refer localizable.strings in the example app for more details.
