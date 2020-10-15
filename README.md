@@ -1,4 +1,4 @@
-![eghl.png](http://e-ghl.com/assets/img/logo.png)
+![eghl_300x91](https://user-images.githubusercontent.com/46514524/96070103-287af580-0ed2-11eb-9a85-5a377c8c7acd.png)
 
 *Software Development Kit (SDK)* makes it easier to integrate your mobile application with eGHL Payment Gateway. This repository is intended as a technical guide for merchant developers and system integrators who are responsible for designing or programming the respective applications to integrate with Payment Gateway.
 
