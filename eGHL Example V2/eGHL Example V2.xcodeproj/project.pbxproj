@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492020F825F1EFDA0075781C /* EGHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492020F425F1EFD00075781C /* EGHL.framework */; };
+		492020F925F1EFDA0075781C /* EGHL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 492020F425F1EFD00075781C /* EGHL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49A9E98925E4A4A10026228A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E98825E4A4A10026228A /* AppDelegate.swift */; };
 		49A9E98B25E4A4A10026228A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E98A25E4A4A10026228A /* SceneDelegate.swift */; };
 		49A9E98D25E4A4A10026228A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E98C25E4A4A10026228A /* ViewController.swift */; };
@@ -15,8 +17,6 @@
 		49A9E99525E4A4A30026228A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A9E99325E4A4A30026228A /* LaunchScreen.storyboard */; };
 		49A9E9A025E4A4A30026228A /* eGHL_Example_V2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E99F25E4A4A30026228A /* eGHL_Example_V2Tests.swift */; };
 		49A9E9AB25E4A4A30026228A /* eGHL_Example_V2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E9AA25E4A4A30026228A /* eGHL_Example_V2UITests.swift */; };
-		49A9E9C325E4A5C30026228A /* EGHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A9E9BB25E4A4F80026228A /* EGHL.framework */; };
-		49A9E9C425E4A5C30026228A /* EGHL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49A9E9BB25E4A4F80026228A /* EGHL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49A9E9CC25E4A6640026228A /* EGHL.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49A9E9CB25E4A6640026228A /* EGHL.bundle */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				49A9E9C425E4A5C30026228A /* EGHL.framework in Embed Frameworks */,
+				492020F925F1EFDA0075781C /* EGHL.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		492020F425F1EFD00075781C /* EGHL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EGHL.framework; sourceTree = "<group>"; };
 		49A9E98525E4A4A10026228A /* eGHL Example V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eGHL Example V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9E98825E4A4A10026228A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9E98A25E4A4A10026228A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		49A9E9A625E4A4A30026228A /* eGHL Example V2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eGHL Example V2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9E9AA25E4A4A30026228A /* eGHL_Example_V2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eGHL_Example_V2UITests.swift; sourceTree = "<group>"; };
 		49A9E9AC25E4A4A30026228A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49A9E9BB25E4A4F80026228A /* EGHL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EGHL.framework; sourceTree = "<group>"; };
 		49A9E9CB25E4A6640026228A /* EGHL.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EGHL.bundle; path = ../../SDK/EGHL.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A9E9C325E4A5C30026228A /* EGHL.framework in Frameworks */,
+				492020F825F1EFDA0075781C /* EGHL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +153,7 @@
 		49A9E9BF25E4A53A0026228A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				49A9E9BB25E4A4F80026228A /* EGHL.framework */,
+				492020F425F1EFD00075781C /* EGHL.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -484,6 +484,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -508,6 +509,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
