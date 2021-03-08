@@ -16,7 +16,7 @@ typedef enum {
     tagSegmentedToken,
 }tagForUI;
 
-@interface ViewController () <UIActionSheetDelegate>
+@interface ViewController () <UIActionSheetDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) PaymentRequestPARAM *paypram;
 @property (strong, nonatomic) EGHLPayment *eghlpay;
 
@@ -50,7 +50,7 @@ typedef enum {
     
     self.paypram = [[PaymentRequestPARAM alloc]init];
     self.eghlpay = [[EGHLPayment alloc]init];
-    
+    [self textFieldDelegate];
     [self setupData];
     [self setupUI];
 }
@@ -66,6 +66,17 @@ typedef enum {
     }
     
     return _paymentID;
+}
+
+- (void)textFieldDelegate
+{
+    _Amount.delegate = self;
+    _Email.delegate = self;
+    _Merchant.delegate = self;
+    _Customer.delegate = self;
+    _ServiceID.delegate = self;
+    _Password.delegate = self;
+    _Currency.delegate = self;
 }
 
 - (void)generateNewPaymentID {
@@ -227,6 +238,7 @@ typedef enum {
                                  // EGHL_CARD_PAGE_BG_COLOR:   [UIColor blueColor]
                                  };
     self.paypram.PymtMethod = EGHL_PAYMENT_METHOD_CARD;
+//    self.paypram.PaymentType = @"84C";
     self.paypram.TokenType = @"OCP";
     self.paypram.Token = @"uUekGp3SPBI7upNxBcZjA==";
     

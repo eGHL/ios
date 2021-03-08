@@ -459,6 +459,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = eGHLSwiftExample/BridgingForObjC.h;
 				SWIFT_VERSION = 4.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -474,6 +475,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = eGHLSwiftExample/BridgingForObjC.h;
 				SWIFT_VERSION = 4.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

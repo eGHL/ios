@@ -12,7 +12,7 @@
 /**
  * @description Parameter Class for GHL API
  *
- * <code> Amount, PaymentID, OrderNumber, MerchantName, ServiceID, PymtMethod, MerchantReturnURL, CustEmail, Password, CustPhone, CurrencyCode, CustName, LanguageCode, PaymentDesc, PageTimeout, CustIP, MerchantApprovalURL, CustMAC, MerchantUnApprovalURL, CardHolder, CardNo, CardExp, CardCVV2, BillAddr, BillPostal, BillCity, BillRegion, BillCountry, ShipAddr, ShipPostal, ShipCity, ShipRegion, ShipCountry, TokenType, Token, SessionID, IssuingBank, MerchantCallBackURL, B4TaxAmt, TaxAmt, Param6, Param7 </code>
+ * <code> Amount, PaymentID, OrderNumber, MerchantName, ServiceID, PymtMethod, PaymentType, MerchantReturnURL, CustEmail, Password, CustPhone, CurrencyCode, CustName, LanguageCode, PaymentDesc, PageTimeout, CustIP, MerchantApprovalURL, CustMAC, MerchantUnApprovalURL, CardHolder, CardNo, CardExp, CardCVV2, BillAddr, BillPostal, BillCity, BillRegion, BillCountry, ShipAddr, ShipPostal, ShipCity, ShipRegion, ShipCountry, TokenType, Token, SessionID, IssuingBank, MerchantCallBackURL, B4TaxAmt, TaxAmt, Param6, Param7 </code>
  *
  *
  * Masterpass Fields:
@@ -28,6 +28,7 @@
 @property (strong, nonatomic) NSString * MerchantName;
 @property (strong, nonatomic) NSString * ServiceID;
 @property (strong, nonatomic) NSString * PymtMethod;
+@property (strong, nonatomic) NSString * PaymentType;
 @property (strong, nonatomic) NSString * MerchantReturnURL;
 @property (strong, nonatomic) NSString * CustEmail;
 @property (strong, nonatomic) NSString * Password;

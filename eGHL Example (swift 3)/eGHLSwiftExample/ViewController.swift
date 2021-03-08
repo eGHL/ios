@@ -56,6 +56,7 @@ class ViewController: UIViewController {
         self.payParam.custEmail = "somebody@somesite.com"
         self.payParam.custName = "Somebody"
         self.payParam.custPhone = "0123456789"
+//        self.payParam.paymentType = "84C"
         
         self.payParam.settingDict = [
             EGHL_DEBUG_PAYMENT_URL: true, // Default: false

@@ -35,6 +35,7 @@
 @property (strong, nonatomic) NSString * Param7;
 @property (strong, nonatomic) NSString * PaymentID;
 @property (strong, nonatomic) NSString * PymtMethod;
+@property (strong, nonatomic) NSString * PaymentType;
 
 @property (strong, nonatomic) NSString * QueryDesc;
 
