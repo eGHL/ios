@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		492020F825F1EFDA0075781C /* EGHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492020F425F1EFD00075781C /* EGHL.framework */; };
-		492020F925F1EFDA0075781C /* EGHL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 492020F425F1EFD00075781C /* EGHL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49A9E98925E4A4A10026228A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E98825E4A4A10026228A /* AppDelegate.swift */; };
 		49A9E98B25E4A4A10026228A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E98A25E4A4A10026228A /* SceneDelegate.swift */; };
 		49A9E98D25E4A4A10026228A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E98C25E4A4A10026228A /* ViewController.swift */; };
@@ -18,6 +16,8 @@
 		49A9E9A025E4A4A30026228A /* eGHL_Example_V2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E99F25E4A4A30026228A /* eGHL_Example_V2Tests.swift */; };
 		49A9E9AB25E4A4A30026228A /* eGHL_Example_V2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9E9AA25E4A4A30026228A /* eGHL_Example_V2UITests.swift */; };
 		49A9E9CC25E4A6640026228A /* EGHL.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49A9E9CB25E4A6640026228A /* EGHL.bundle */; };
+		49E01D352641218900ADAF30 /* EGHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E01D332641214F00ADAF30 /* EGHL.framework */; };
+		49E01D362641218900ADAF30 /* EGHL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49E01D332641214F00ADAF30 /* EGHL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				492020F925F1EFDA0075781C /* EGHL.framework in Embed Frameworks */,
+				49E01D362641218900ADAF30 /* EGHL.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,7 +52,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		492020F425F1EFD00075781C /* EGHL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EGHL.framework; sourceTree = "<group>"; };
 		49A9E98525E4A4A10026228A /* eGHL Example V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eGHL Example V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9E98825E4A4A10026228A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9E98A25E4A4A10026228A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		49A9E9AA25E4A4A30026228A /* eGHL_Example_V2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eGHL_Example_V2UITests.swift; sourceTree = "<group>"; };
 		49A9E9AC25E4A4A30026228A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49A9E9CB25E4A6640026228A /* EGHL.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EGHL.bundle; path = ../../SDK/EGHL.bundle; sourceTree = "<group>"; };
+		49E01D332641214F00ADAF30 /* EGHL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EGHL.framework; path = ../../SDK/EGHL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492020F825F1EFDA0075781C /* EGHL.framework in Frameworks */,
+				49E01D352641218900ADAF30 /* EGHL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +153,7 @@
 		49A9E9BF25E4A53A0026228A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				492020F425F1EFD00075781C /* EGHL.framework */,
+				49E01D332641214F00ADAF30 /* EGHL.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -470,11 +470,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DN554RS36R;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = ../SDK;
 				INFOPLIST_FILE = "eGHL Example V2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,11 +492,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DN554RS36R;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = ../SDK;
 				INFOPLIST_FILE = "eGHL Example V2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
